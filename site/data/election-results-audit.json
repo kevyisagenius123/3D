@@ -1,0 +1,2784 @@
+{
+  "generatedAt": "2026-08-08T03:41:17.313Z",
+  "source": "county detail from countypres_2000-2024.csv; 2024 Vermont counties from 2024_sandbox.csv; 2016-2024 state totals from FEC",
+  "years": {
+    "2000": {
+      "reportingUnits": 3151,
+      "mappedUnits": 3148,
+      "unmappedUnits": 3,
+      "demVotes": 51001968,
+      "gopVotes": 50457896,
+      "otherVotes": 3951511,
+      "totalVotes": 105411375,
+      "demShare": 0.48383742266904306,
+      "gopShare": 0.47867600626592716,
+      "states": {
+        "AK": {
+          "demVotes": 79004,
+          "gopVotes": 167398,
+          "otherVotes": 39128,
+          "totalVotes": 285530
+        },
+        "AL": {
+          "demVotes": 695602,
+          "gopVotes": 944409,
+          "otherVotes": 32540,
+          "totalVotes": 1672551
+        },
+        "AR": {
+          "demVotes": 422768,
+          "gopVotes": 472940,
+          "otherVotes": 26073,
+          "totalVotes": 921781
+        },
+        "AZ": {
+          "demVotes": 685341,
+          "gopVotes": 781652,
+          "otherVotes": 67120,
+          "totalVotes": 1534113
+        },
+        "CA": {
+          "demVotes": 5861203,
+          "gopVotes": 4567429,
+          "otherVotes": 537224,
+          "totalVotes": 10965856
+        },
+        "CO": {
+          "demVotes": 738227,
+          "gopVotes": 883745,
+          "otherVotes": 119393,
+          "totalVotes": 1741365
+        },
+        "CT": {
+          "demVotes": 816015,
+          "gopVotes": 561094,
+          "otherVotes": 82416,
+          "totalVotes": 1459525
+        },
+        "DC": {
+          "demVotes": 171923,
+          "gopVotes": 18073,
+          "otherVotes": 11898,
+          "totalVotes": 201894
+        },
+        "DE": {
+          "demVotes": 180068,
+          "gopVotes": 137288,
+          "otherVotes": 10173,
+          "totalVotes": 327529
+        },
+        "FL": {
+          "demVotes": 2911417,
+          "gopVotes": 2911215,
+          "otherVotes": 138028,
+          "totalVotes": 5960660
+        },
+        "GA": {
+          "demVotes": 1116230,
+          "gopVotes": 1419720,
+          "otherVotes": 60854,
+          "totalVotes": 2596804
+        },
+        "HI": {
+          "demVotes": 205242,
+          "gopVotes": 137819,
+          "otherVotes": 24810,
+          "totalVotes": 367871
+        },
+        "IA": {
+          "demVotes": 638517,
+          "gopVotes": 634373,
+          "otherVotes": 42673,
+          "totalVotes": 1315563
+        },
+        "ID": {
+          "demVotes": 138637,
+          "gopVotes": 336937,
+          "otherVotes": 26047,
+          "totalVotes": 501621
+        },
+        "IL": {
+          "demVotes": 2589026,
+          "gopVotes": 2019421,
+          "otherVotes": 133676,
+          "totalVotes": 4742123
+        },
+        "IN": {
+          "demVotes": 901980,
+          "gopVotes": 1245836,
+          "otherVotes": 51489,
+          "totalVotes": 2199305
+        },
+        "KS": {
+          "demVotes": 399276,
+          "gopVotes": 622332,
+          "otherVotes": 50608,
+          "totalVotes": 1072216
+        },
+        "KY": {
+          "demVotes": 638898,
+          "gopVotes": 872492,
+          "otherVotes": 32797,
+          "totalVotes": 1544187
+        },
+        "LA": {
+          "demVotes": 792344,
+          "gopVotes": 927871,
+          "otherVotes": 45441,
+          "totalVotes": 1765656
+        },
+        "MA": {
+          "demVotes": 1616487,
+          "gopVotes": 878502,
+          "otherVotes": 207995,
+          "totalVotes": 2702984
+        },
+        "MD": {
+          "demVotes": 1145782,
+          "gopVotes": 813797,
+          "otherVotes": 65901,
+          "totalVotes": 2025480
+        },
+        "ME": {
+          "demVotes": 319951,
+          "gopVotes": 286616,
+          "otherVotes": 45250,
+          "totalVotes": 651817
+        },
+        "MI": {
+          "demVotes": 2170418,
+          "gopVotes": 1953139,
+          "otherVotes": 109154,
+          "totalVotes": 4232711
+        },
+        "MN": {
+          "demVotes": 1168266,
+          "gopVotes": 1109659,
+          "otherVotes": 160760,
+          "totalVotes": 2438685
+        },
+        "MO": {
+          "demVotes": 1111138,
+          "gopVotes": 1189924,
+          "otherVotes": 58830,
+          "totalVotes": 2359892
+        },
+        "MS": {
+          "demVotes": 404964,
+          "gopVotes": 573230,
+          "otherVotes": 16732,
+          "totalVotes": 994926
+        },
+        "MT": {
+          "demVotes": 137126,
+          "gopVotes": 240178,
+          "otherVotes": 33682,
+          "totalVotes": 410986
+        },
+        "NC": {
+          "demVotes": 1257692,
+          "gopVotes": 1631163,
+          "otherVotes": 22407,
+          "totalVotes": 2911262
+        },
+        "ND": {
+          "demVotes": 95284,
+          "gopVotes": 174852,
+          "otherVotes": 18131,
+          "totalVotes": 288267
+        },
+        "NE": {
+          "demVotes": 231780,
+          "gopVotes": 433862,
+          "otherVotes": 31377,
+          "totalVotes": 697019
+        },
+        "NH": {
+          "demVotes": 266348,
+          "gopVotes": 273559,
+          "otherVotes": 29174,
+          "totalVotes": 569081
+        },
+        "NJ": {
+          "demVotes": 1788850,
+          "gopVotes": 1284173,
+          "otherVotes": 114203,
+          "totalVotes": 3187226
+        },
+        "NM": {
+          "demVotes": 286783,
+          "gopVotes": 286417,
+          "otherVotes": 25405,
+          "totalVotes": 598605
+        },
+        "NV": {
+          "demVotes": 279978,
+          "gopVotes": 301575,
+          "otherVotes": 27417,
+          "totalVotes": 608970
+        },
+        "NY": {
+          "demVotes": 4107697,
+          "gopVotes": 2403374,
+          "otherVotes": 310928,
+          "totalVotes": 6821999
+        },
+        "OH": {
+          "demVotes": 2186190,
+          "gopVotes": 2351209,
+          "otherVotes": 168058,
+          "totalVotes": 4705457
+        },
+        "OK": {
+          "demVotes": 474276,
+          "gopVotes": 744337,
+          "otherVotes": 15616,
+          "totalVotes": 1234229
+        },
+        "OR": {
+          "demVotes": 720342,
+          "gopVotes": 713577,
+          "otherVotes": 100049,
+          "totalVotes": 1533968
+        },
+        "PA": {
+          "demVotes": 2485967,
+          "gopVotes": 2281127,
+          "otherVotes": 145091,
+          "totalVotes": 4912185
+        },
+        "RI": {
+          "demVotes": 249508,
+          "gopVotes": 130555,
+          "otherVotes": 29049,
+          "totalVotes": 409112
+        },
+        "SC": {
+          "demVotes": 566039,
+          "gopVotes": 786426,
+          "otherVotes": 31312,
+          "totalVotes": 1383777
+        },
+        "SD": {
+          "demVotes": 118804,
+          "gopVotes": 190700,
+          "otherVotes": 6765,
+          "totalVotes": 316269
+        },
+        "TN": {
+          "demVotes": 981720,
+          "gopVotes": 1061949,
+          "otherVotes": 32512,
+          "totalVotes": 2076181
+        },
+        "TX": {
+          "demVotes": 2433746,
+          "gopVotes": 3799639,
+          "otherVotes": 174252,
+          "totalVotes": 6407637
+        },
+        "UT": {
+          "demVotes": 203053,
+          "gopVotes": 515096,
+          "otherVotes": 52605,
+          "totalVotes": 770754
+        },
+        "VA": {
+          "demVotes": 1216422,
+          "gopVotes": 1436877,
+          "otherVotes": 84616,
+          "totalVotes": 2737915
+        },
+        "VT": {
+          "demVotes": 149022,
+          "gopVotes": 119775,
+          "otherVotes": 25511,
+          "totalVotes": 294308
+        },
+        "WA": {
+          "demVotes": 1247652,
+          "gopVotes": 1108864,
+          "otherVotes": 131925,
+          "totalVotes": 2488441
+        },
+        "WI": {
+          "demVotes": 1242987,
+          "gopVotes": 1237279,
+          "otherVotes": 118341,
+          "totalVotes": 2598607
+        },
+        "WV": {
+          "demVotes": 295497,
+          "gopVotes": 336475,
+          "otherVotes": 16152,
+          "totalVotes": 648124
+        },
+        "WY": {
+          "demVotes": 60481,
+          "gopVotes": 147947,
+          "otherVotes": 9923,
+          "totalVotes": 218351
+        }
+      }
+    },
+    "2004": {
+      "reportingUnits": 3152,
+      "mappedUnits": 3149,
+      "unmappedUnits": 3,
+      "demVotes": 58899063,
+      "gopVotes": 61931981,
+      "otherVotes": 1489505,
+      "totalVotes": 122320549,
+      "demShare": 0.4815140504315428,
+      "gopShare": 0.5063088868248948,
+      "states": {
+        "AK": {
+          "demVotes": 180365,
+          "gopVotes": 292267,
+          "otherVotes": 16061,
+          "totalVotes": 488693
+        },
+        "AL": {
+          "demVotes": 693933,
+          "gopVotes": 1176394,
+          "otherVotes": 13088,
+          "totalVotes": 1883415
+        },
+        "AR": {
+          "demVotes": 468631,
+          "gopVotes": 572770,
+          "otherVotes": 12293,
+          "totalVotes": 1053694
+        },
+        "AZ": {
+          "demVotes": 893524,
+          "gopVotes": 1104294,
+          "otherVotes": 14767,
+          "totalVotes": 2012585
+        },
+        "CA": {
+          "demVotes": 6737355,
+          "gopVotes": 5501496,
+          "otherVotes": 144827,
+          "totalVotes": 12383678
+        },
+        "CO": {
+          "demVotes": 1001732,
+          "gopVotes": 1101255,
+          "otherVotes": 26643,
+          "totalVotes": 2129630
+        },
+        "CT": {
+          "demVotes": 857488,
+          "gopVotes": 693826,
+          "otherVotes": 27455,
+          "totalVotes": 1578769
+        },
+        "DC": {
+          "demVotes": 202970,
+          "gopVotes": 21256,
+          "otherVotes": 3360,
+          "totalVotes": 227586
+        },
+        "DE": {
+          "demVotes": 200141,
+          "gopVotes": 171651,
+          "otherVotes": 3378,
+          "totalVotes": 375170
+        },
+        "FL": {
+          "demVotes": 3583544,
+          "gopVotes": 3964522,
+          "otherVotes": 61744,
+          "totalVotes": 7609810
+        },
+        "GA": {
+          "demVotes": 1366149,
+          "gopVotes": 1914254,
+          "otherVotes": 18387,
+          "totalVotes": 3298790
+        },
+        "HI": {
+          "demVotes": 231335,
+          "gopVotes": 194116,
+          "otherVotes": 3104,
+          "totalVotes": 428555
+        },
+        "IA": {
+          "demVotes": 741898,
+          "gopVotes": 751957,
+          "otherVotes": 13053,
+          "totalVotes": 1506908
+        },
+        "ID": {
+          "demVotes": 181098,
+          "gopVotes": 409235,
+          "otherVotes": 8043,
+          "totalVotes": 598376
+        },
+        "IL": {
+          "demVotes": 2891989,
+          "gopVotes": 2346608,
+          "otherVotes": 36818,
+          "totalVotes": 5275415
+        },
+        "IN": {
+          "demVotes": 969011,
+          "gopVotes": 1479438,
+          "otherVotes": 19553,
+          "totalVotes": 2468002
+        },
+        "KS": {
+          "demVotes": 434993,
+          "gopVotes": 736456,
+          "otherVotes": 16307,
+          "totalVotes": 1187756
+        },
+        "KY": {
+          "demVotes": 712733,
+          "gopVotes": 1069439,
+          "otherVotes": 13688,
+          "totalVotes": 1795860
+        },
+        "LA": {
+          "demVotes": 820299,
+          "gopVotes": 1102169,
+          "otherVotes": 20638,
+          "totalVotes": 1943106
+        },
+        "MA": {
+          "demVotes": 1803800,
+          "gopVotes": 1071109,
+          "otherVotes": 37479,
+          "totalVotes": 2912388
+        },
+        "MD": {
+          "demVotes": 1334493,
+          "gopVotes": 1024703,
+          "otherVotes": 27482,
+          "totalVotes": 2386678
+        },
+        "ME": {
+          "demVotes": 364153,
+          "gopVotes": 308997,
+          "otherVotes": 13360,
+          "totalVotes": 686510
+        },
+        "MI": {
+          "demVotes": 2479183,
+          "gopVotes": 2313746,
+          "otherVotes": 46323,
+          "totalVotes": 4839252
+        },
+        "MN": {
+          "demVotes": 1444751,
+          "gopVotes": 1346451,
+          "otherVotes": 36648,
+          "totalVotes": 2827850
+        },
+        "MO": {
+          "demVotes": 1259171,
+          "gopVotes": 1455713,
+          "otherVotes": 16480,
+          "totalVotes": 2731364
+        },
+        "MS": {
+          "demVotes": 440034,
+          "gopVotes": 666295,
+          "otherVotes": 8530,
+          "totalVotes": 1114859
+        },
+        "MT": {
+          "demVotes": 173710,
+          "gopVotes": 266063,
+          "otherVotes": 10661,
+          "totalVotes": 450434
+        },
+        "NC": {
+          "demVotes": 1525849,
+          "gopVotes": 1961166,
+          "otherVotes": 13992,
+          "totalVotes": 3501007
+        },
+        "ND": {
+          "demVotes": 111052,
+          "gopVotes": 196651,
+          "otherVotes": 5130,
+          "totalVotes": 312833
+        },
+        "NE": {
+          "demVotes": 254328,
+          "gopVotes": 512814,
+          "otherVotes": 11044,
+          "totalVotes": 778186
+        },
+        "NH": {
+          "demVotes": 340511,
+          "gopVotes": 331237,
+          "otherVotes": 5914,
+          "totalVotes": 677662
+        },
+        "NJ": {
+          "demVotes": 1911430,
+          "gopVotes": 1668003,
+          "otherVotes": 30258,
+          "totalVotes": 3609691
+        },
+        "NM": {
+          "demVotes": 370942,
+          "gopVotes": 376930,
+          "otherVotes": 8432,
+          "totalVotes": 756304
+        },
+        "NV": {
+          "demVotes": 397190,
+          "gopVotes": 418690,
+          "otherVotes": 13707,
+          "totalVotes": 829587
+        },
+        "NY": {
+          "demVotes": 4180755,
+          "gopVotes": 2806993,
+          "otherVotes": 403288,
+          "totalVotes": 7391036
+        },
+        "OH": {
+          "demVotes": 2739952,
+          "gopVotes": 2858727,
+          "otherVotes": 26952,
+          "totalVotes": 5625631
+        },
+        "OK": {
+          "demVotes": 503966,
+          "gopVotes": 959792,
+          "otherVotes": 0,
+          "totalVotes": 1463758
+        },
+        "OR": {
+          "demVotes": 943163,
+          "gopVotes": 866831,
+          "otherVotes": 26788,
+          "totalVotes": 1836782
+        },
+        "PA": {
+          "demVotes": 2938095,
+          "gopVotes": 2793847,
+          "otherVotes": 33822,
+          "totalVotes": 5765764
+        },
+        "RI": {
+          "demVotes": 259760,
+          "gopVotes": 169046,
+          "otherVotes": 7483,
+          "totalVotes": 436289
+        },
+        "SC": {
+          "demVotes": 661699,
+          "gopVotes": 937974,
+          "otherVotes": 18057,
+          "totalVotes": 1617730
+        },
+        "SD": {
+          "demVotes": 149244,
+          "gopVotes": 232584,
+          "otherVotes": 6387,
+          "totalVotes": 388215
+        },
+        "TN": {
+          "demVotes": 1032910,
+          "gopVotes": 1381225,
+          "otherVotes": 16359,
+          "totalVotes": 2430494
+        },
+        "TX": {
+          "demVotes": 2832704,
+          "gopVotes": 4526917,
+          "otherVotes": 51128,
+          "totalVotes": 7410749
+        },
+        "UT": {
+          "demVotes": 241199,
+          "gopVotes": 663742,
+          "otherVotes": 22903,
+          "totalVotes": 927844
+        },
+        "VA": {
+          "demVotes": 1454742,
+          "gopVotes": 1716959,
+          "otherVotes": 26666,
+          "totalVotes": 3198367
+        },
+        "VT": {
+          "demVotes": 184067,
+          "gopVotes": 121180,
+          "otherVotes": 7062,
+          "totalVotes": 312309
+        },
+        "WA": {
+          "demVotes": 1510201,
+          "gopVotes": 1304894,
+          "otherVotes": 43989,
+          "totalVotes": 2859084
+        },
+        "WI": {
+          "demVotes": 1489504,
+          "gopVotes": 1478120,
+          "otherVotes": 29383,
+          "totalVotes": 2997007
+        },
+        "WV": {
+          "demVotes": 326541,
+          "gopVotes": 423550,
+          "otherVotes": 5568,
+          "totalVotes": 755659
+        },
+        "WY": {
+          "demVotes": 70776,
+          "gopVotes": 167629,
+          "otherVotes": 5023,
+          "totalVotes": 243428
+        }
+      }
+    },
+    "2008": {
+      "reportingUnits": 3152,
+      "mappedUnits": 3149,
+      "unmappedUnits": 3,
+      "demVotes": 69448278,
+      "gopVotes": 59928695,
+      "otherVotes": 1810364,
+      "totalVotes": 131187337,
+      "demShare": 0.5293824814814253,
+      "gopShare": 0.45681768050524574,
+      "states": {
+        "AK": {
+          "demVotes": 123594,
+          "gopVotes": 193841,
+          "otherVotes": 8762,
+          "totalVotes": 326197
+        },
+        "AL": {
+          "demVotes": 813479,
+          "gopVotes": 1266546,
+          "otherVotes": 19794,
+          "totalVotes": 2099819
+        },
+        "AR": {
+          "demVotes": 422310,
+          "gopVotes": 638017,
+          "otherVotes": 26290,
+          "totalVotes": 1086617
+        },
+        "AZ": {
+          "demVotes": 1034707,
+          "gopVotes": 1230111,
+          "otherVotes": 28657,
+          "totalVotes": 2293475
+        },
+        "CA": {
+          "demVotes": 8274473,
+          "gopVotes": 5011781,
+          "otherVotes": 275646,
+          "totalVotes": 13561900
+        },
+        "CO": {
+          "demVotes": 1288576,
+          "gopVotes": 1073589,
+          "otherVotes": 39196,
+          "totalVotes": 2401361
+        },
+        "CT": {
+          "demVotes": 1000291,
+          "gopVotes": 628041,
+          "otherVotes": 18753,
+          "totalVotes": 1647085
+        },
+        "DC": {
+          "demVotes": 245800,
+          "gopVotes": 17367,
+          "otherVotes": 2686,
+          "totalVotes": 265853
+        },
+        "DE": {
+          "demVotes": 255459,
+          "gopVotes": 152374,
+          "otherVotes": 4579,
+          "totalVotes": 412412
+        },
+        "FL": {
+          "demVotes": 4282366,
+          "gopVotes": 4046212,
+          "otherVotes": 63061,
+          "totalVotes": 8391639
+        },
+        "GA": {
+          "demVotes": 1844137,
+          "gopVotes": 2048744,
+          "otherVotes": 32397,
+          "totalVotes": 3925278
+        },
+        "HI": {
+          "demVotes": 325201,
+          "gopVotes": 120429,
+          "otherVotes": 7112,
+          "totalVotes": 452742
+        },
+        "IA": {
+          "demVotes": 828940,
+          "gopVotes": 682379,
+          "otherVotes": 25501,
+          "totalVotes": 1536820
+        },
+        "ID": {
+          "demVotes": 236440,
+          "gopVotes": 403012,
+          "otherVotes": 15580,
+          "totalVotes": 655032
+        },
+        "IL": {
+          "demVotes": 3419673,
+          "gopVotes": 2031527,
+          "otherVotes": 71851,
+          "totalVotes": 5523051
+        },
+        "IN": {
+          "demVotes": 1374039,
+          "gopVotes": 1345648,
+          "otherVotes": 31367,
+          "totalVotes": 2751054
+        },
+        "KS": {
+          "demVotes": 514765,
+          "gopVotes": 699655,
+          "otherVotes": 21452,
+          "totalVotes": 1235872
+        },
+        "KY": {
+          "demVotes": 751985,
+          "gopVotes": 1048462,
+          "otherVotes": 26061,
+          "totalVotes": 1826508
+        },
+        "LA": {
+          "demVotes": 781574,
+          "gopVotes": 1148015,
+          "otherVotes": 29496,
+          "totalVotes": 1959085
+        },
+        "MA": {
+          "demVotes": 1904103,
+          "gopVotes": 1108885,
+          "otherVotes": 68348,
+          "totalVotes": 3081336
+        },
+        "MD": {
+          "demVotes": 1629467,
+          "gopVotes": 959862,
+          "otherVotes": 42267,
+          "totalVotes": 2631596
+        },
+        "ME": {
+          "demVotes": 421923,
+          "gopVotes": 295273,
+          "otherVotes": 13967,
+          "totalVotes": 731163
+        },
+        "MI": {
+          "demVotes": 2872579,
+          "gopVotes": 2048639,
+          "otherVotes": 80548,
+          "totalVotes": 5001766
+        },
+        "MN": {
+          "demVotes": 1573354,
+          "gopVotes": 1275409,
+          "otherVotes": 61606,
+          "totalVotes": 2910369
+        },
+        "MO": {
+          "demVotes": 1441911,
+          "gopVotes": 1445814,
+          "otherVotes": 37480,
+          "totalVotes": 2925205
+        },
+        "MS": {
+          "demVotes": 554662,
+          "gopVotes": 724497,
+          "otherVotes": 6100,
+          "totalVotes": 1285259
+        },
+        "MT": {
+          "demVotes": 232156,
+          "gopVotes": 243860,
+          "otherVotes": 20056,
+          "totalVotes": 496072
+        },
+        "NC": {
+          "demVotes": 2142651,
+          "gopVotes": 2128474,
+          "otherVotes": 39664,
+          "totalVotes": 4310789
+        },
+        "ND": {
+          "demVotes": 141278,
+          "gopVotes": 168601,
+          "otherVotes": 6742,
+          "totalVotes": 316621
+        },
+        "NE": {
+          "demVotes": 333319,
+          "gopVotes": 452979,
+          "otherVotes": 14983,
+          "totalVotes": 801281
+        },
+        "NH": {
+          "demVotes": 384826,
+          "gopVotes": 316534,
+          "otherVotes": 9610,
+          "totalVotes": 710970
+        },
+        "NJ": {
+          "demVotes": 2215422,
+          "gopVotes": 1613207,
+          "otherVotes": 9869,
+          "totalVotes": 3838498
+        },
+        "NM": {
+          "demVotes": 472422,
+          "gopVotes": 346832,
+          "otherVotes": 10904,
+          "totalVotes": 830158
+        },
+        "NV": {
+          "demVotes": 533736,
+          "gopVotes": 412827,
+          "otherVotes": 21285,
+          "totalVotes": 967848
+        },
+        "NY": {
+          "demVotes": 4769700,
+          "gopVotes": 2742298,
+          "otherVotes": 79235,
+          "totalVotes": 7591233
+        },
+        "OH": {
+          "demVotes": 2933388,
+          "gopVotes": 2674491,
+          "otherVotes": 90169,
+          "totalVotes": 5698048
+        },
+        "OK": {
+          "demVotes": 502496,
+          "gopVotes": 960165,
+          "otherVotes": 0,
+          "totalVotes": 1462661
+        },
+        "OR": {
+          "demVotes": 1037291,
+          "gopVotes": 738475,
+          "otherVotes": 52098,
+          "totalVotes": 1827864
+        },
+        "PA": {
+          "demVotes": 3266523,
+          "gopVotes": 2649934,
+          "otherVotes": 61524,
+          "totalVotes": 5977981
+        },
+        "RI": {
+          "demVotes": 296571,
+          "gopVotes": 165391,
+          "otherVotes": 9804,
+          "totalVotes": 471766
+        },
+        "SC": {
+          "demVotes": 862449,
+          "gopVotes": 1034896,
+          "otherVotes": 23624,
+          "totalVotes": 1920969
+        },
+        "SD": {
+          "demVotes": 170924,
+          "gopVotes": 203054,
+          "otherVotes": 3730,
+          "totalVotes": 377708
+        },
+        "TN": {
+          "demVotes": 1087437,
+          "gopVotes": 1479178,
+          "otherVotes": 33509,
+          "totalVotes": 2600124
+        },
+        "TX": {
+          "demVotes": 3528633,
+          "gopVotes": 4479328,
+          "otherVotes": 69834,
+          "totalVotes": 8077795
+        },
+        "UT": {
+          "demVotes": 327670,
+          "gopVotes": 596030,
+          "otherVotes": 28670,
+          "totalVotes": 952370
+        },
+        "VA": {
+          "demVotes": 1959532,
+          "gopVotes": 1725005,
+          "otherVotes": 38723,
+          "totalVotes": 3723260
+        },
+        "VT": {
+          "demVotes": 219262,
+          "gopVotes": 98974,
+          "otherVotes": 6810,
+          "totalVotes": 325046
+        },
+        "WA": {
+          "demVotes": 1750848,
+          "gopVotes": 1229216,
+          "otherVotes": 56814,
+          "totalVotes": 3036878
+        },
+        "WI": {
+          "demVotes": 1677211,
+          "gopVotes": 1262393,
+          "otherVotes": 43813,
+          "totalVotes": 2983417
+        },
+        "WV": {
+          "demVotes": 303857,
+          "gopVotes": 397466,
+          "otherVotes": 12128,
+          "totalVotes": 713451
+        },
+        "WY": {
+          "demVotes": 82868,
+          "gopVotes": 164958,
+          "otherVotes": 8209,
+          "totalVotes": 256035
+        }
+      }
+    },
+    "2012": {
+      "reportingUnits": 3152,
+      "mappedUnits": 3149,
+      "unmappedUnits": 3,
+      "demVotes": 65753019,
+      "gopVotes": 60666387,
+      "otherVotes": 2629510,
+      "totalVotes": 129048916,
+      "demShare": 0.5095201187121944,
+      "gopShare": 0.4701038093183208,
+      "states": {
+        "AK": {
+          "demVotes": 122640,
+          "gopVotes": 164676,
+          "otherVotes": 13179,
+          "totalVotes": 300495
+        },
+        "AL": {
+          "demVotes": 795696,
+          "gopVotes": 1255925,
+          "otherVotes": 18732,
+          "totalVotes": 2070353
+        },
+        "AR": {
+          "demVotes": 394409,
+          "gopVotes": 647744,
+          "otherVotes": 27315,
+          "totalVotes": 1069468
+        },
+        "AZ": {
+          "demVotes": 1025232,
+          "gopVotes": 1233654,
+          "otherVotes": 40368,
+          "totalVotes": 2299254
+        },
+        "CA": {
+          "demVotes": 7854285,
+          "gopVotes": 4839958,
+          "otherVotes": 344304,
+          "totalVotes": 13038547
+        },
+        "CO": {
+          "demVotes": 1322998,
+          "gopVotes": 1185050,
+          "otherVotes": 61169,
+          "totalVotes": 2569217
+        },
+        "CT": {
+          "demVotes": 905083,
+          "gopVotes": 634892,
+          "otherVotes": 18828,
+          "totalVotes": 1558803
+        },
+        "DC": {
+          "demVotes": 267070,
+          "gopVotes": 21381,
+          "otherVotes": 5313,
+          "totalVotes": 293764
+        },
+        "DE": {
+          "demVotes": 242584,
+          "gopVotes": 165484,
+          "otherVotes": 5869,
+          "totalVotes": 413937
+        },
+        "FL": {
+          "demVotes": 4237756,
+          "gopVotes": 4163447,
+          "otherVotes": 72976,
+          "totalVotes": 8474179
+        },
+        "GA": {
+          "demVotes": 1773827,
+          "gopVotes": 2078688,
+          "otherVotes": 47535,
+          "totalVotes": 3900050
+        },
+        "HI": {
+          "demVotes": 306266,
+          "gopVotes": 120937,
+          "otherVotes": 7018,
+          "totalVotes": 434221
+        },
+        "IA": {
+          "demVotes": 822544,
+          "gopVotes": 730617,
+          "otherVotes": 29019,
+          "totalVotes": 1582180
+        },
+        "ID": {
+          "demVotes": 212787,
+          "gopVotes": 420911,
+          "otherVotes": 18576,
+          "totalVotes": 652274
+        },
+        "IL": {
+          "demVotes": 3019512,
+          "gopVotes": 2135102,
+          "otherVotes": 87277,
+          "totalVotes": 5241891
+        },
+        "IN": {
+          "demVotes": 1152887,
+          "gopVotes": 1420543,
+          "otherVotes": 51104,
+          "totalVotes": 2624534
+        },
+        "KS": {
+          "demVotes": 439908,
+          "gopVotes": 689809,
+          "otherVotes": 26537,
+          "totalVotes": 1156254
+        },
+        "KY": {
+          "demVotes": 679370,
+          "gopVotes": 1087190,
+          "otherVotes": 30652,
+          "totalVotes": 1797212
+        },
+        "LA": {
+          "demVotes": 809141,
+          "gopVotes": 1152262,
+          "otherVotes": 32662,
+          "totalVotes": 1994065
+        },
+        "MA": {
+          "demVotes": 1921290,
+          "gopVotes": 1188314,
+          "otherVotes": 58163,
+          "totalVotes": 3167767
+        },
+        "MD": {
+          "demVotes": 1677844,
+          "gopVotes": 971869,
+          "otherVotes": 57614,
+          "totalVotes": 2707327
+        },
+        "ME": {
+          "demVotes": 401306,
+          "gopVotes": 292276,
+          "otherVotes": 19598,
+          "totalVotes": 713180
+        },
+        "MI": {
+          "demVotes": 2564569,
+          "gopVotes": 2115256,
+          "otherVotes": 51136,
+          "totalVotes": 4730961
+        },
+        "MN": {
+          "demVotes": 1546167,
+          "gopVotes": 1320225,
+          "otherVotes": 70169,
+          "totalVotes": 2936561
+        },
+        "MO": {
+          "demVotes": 1223796,
+          "gopVotes": 1482440,
+          "otherVotes": 51076,
+          "totalVotes": 2757312
+        },
+        "MS": {
+          "demVotes": 562949,
+          "gopVotes": 710746,
+          "otherVotes": 11889,
+          "totalVotes": 1285584
+        },
+        "MT": {
+          "demVotes": 201839,
+          "gopVotes": 267928,
+          "otherVotes": 14165,
+          "totalVotes": 483932
+        },
+        "NC": {
+          "demVotes": 2178391,
+          "gopVotes": 2270395,
+          "otherVotes": 56586,
+          "totalVotes": 4505372
+        },
+        "ND": {
+          "demVotes": 124966,
+          "gopVotes": 188320,
+          "otherVotes": 9646,
+          "totalVotes": 322932
+        },
+        "NE": {
+          "demVotes": 302081,
+          "gopVotes": 475064,
+          "otherVotes": 17234,
+          "totalVotes": 794379
+        },
+        "NH": {
+          "demVotes": 369561,
+          "gopVotes": 329918,
+          "otherVotes": 11452,
+          "totalVotes": 710931
+        },
+        "NJ": {
+          "demVotes": 2125101,
+          "gopVotes": 1477568,
+          "otherVotes": 37623,
+          "totalVotes": 3640292
+        },
+        "NM": {
+          "demVotes": 415335,
+          "gopVotes": 335788,
+          "otherVotes": 32635,
+          "totalVotes": 783758
+        },
+        "NV": {
+          "demVotes": 531373,
+          "gopVotes": 463567,
+          "otherVotes": 19978,
+          "totalVotes": 1014918
+        },
+        "NY": {
+          "demVotes": 4324228,
+          "gopVotes": 2223397,
+          "otherVotes": 514300,
+          "totalVotes": 7061925
+        },
+        "OH": {
+          "demVotes": 2827621,
+          "gopVotes": 2661407,
+          "otherVotes": 91794,
+          "totalVotes": 5580822
+        },
+        "OK": {
+          "demVotes": 443547,
+          "gopVotes": 891325,
+          "otherVotes": 0,
+          "totalVotes": 1334872
+        },
+        "OR": {
+          "demVotes": 970488,
+          "gopVotes": 754175,
+          "otherVotes": 64607,
+          "totalVotes": 1789270
+        },
+        "PA": {
+          "demVotes": 2990274,
+          "gopVotes": 2680434,
+          "otherVotes": 71332,
+          "totalVotes": 5742040
+        },
+        "RI": {
+          "demVotes": 279677,
+          "gopVotes": 157204,
+          "otherVotes": 9171,
+          "totalVotes": 446052
+        },
+        "SC": {
+          "demVotes": 865941,
+          "gopVotes": 1071645,
+          "otherVotes": 26532,
+          "totalVotes": 1964118
+        },
+        "SD": {
+          "demVotes": 145039,
+          "gopVotes": 210610,
+          "otherVotes": 8166,
+          "totalVotes": 363815
+        },
+        "TN": {
+          "demVotes": 960709,
+          "gopVotes": 1462330,
+          "otherVotes": 35538,
+          "totalVotes": 2458577
+        },
+        "TX": {
+          "demVotes": 3308124,
+          "gopVotes": 4569843,
+          "otherVotes": 115884,
+          "totalVotes": 7993851
+        },
+        "UT": {
+          "demVotes": 251813,
+          "gopVotes": 740600,
+          "otherVotes": 25027,
+          "totalVotes": 1017440
+        },
+        "VA": {
+          "demVotes": 1971820,
+          "gopVotes": 1822522,
+          "otherVotes": 60147,
+          "totalVotes": 3854489
+        },
+        "VT": {
+          "demVotes": 199239,
+          "gopVotes": 92698,
+          "otherVotes": 7353,
+          "totalVotes": 299290
+        },
+        "WA": {
+          "demVotes": 1755396,
+          "gopVotes": 1290670,
+          "otherVotes": 79450,
+          "totalVotes": 3125516
+        },
+        "WI": {
+          "demVotes": 1620985,
+          "gopVotes": 1410966,
+          "otherVotes": 39483,
+          "totalVotes": 3071434
+        },
+        "WV": {
+          "demVotes": 238269,
+          "gopVotes": 417655,
+          "otherVotes": 14516,
+          "totalVotes": 670440
+        },
+        "WY": {
+          "demVotes": 69286,
+          "gopVotes": 170962,
+          "otherVotes": 8813,
+          "totalVotes": 249061
+        }
+      }
+    },
+    "2016": {
+      "reportingUnits": 3152,
+      "mappedUnits": 3149,
+      "unmappedUnits": 3,
+      "demVotes": 65853514,
+      "gopVotes": 62984828,
+      "otherVotes": 7830934,
+      "totalVotes": 136669276,
+      "demShare": 0.48184578075909323,
+      "gopShare": 0.46085579614836036,
+      "states": {
+        "AK": {
+          "demVotes": 116454,
+          "gopVotes": 163387,
+          "otherVotes": 38767,
+          "totalVotes": 318608
+        },
+        "AL": {
+          "demVotes": 729547,
+          "gopVotes": 1318255,
+          "otherVotes": 75570,
+          "totalVotes": 2123372
+        },
+        "AR": {
+          "demVotes": 380494,
+          "gopVotes": 684872,
+          "otherVotes": 65310,
+          "totalVotes": 1130676
+        },
+        "AZ": {
+          "demVotes": 1161167,
+          "gopVotes": 1252401,
+          "otherVotes": 159597,
+          "totalVotes": 2573165
+        },
+        "CA": {
+          "demVotes": 8753792,
+          "gopVotes": 4483814,
+          "otherVotes": 943998,
+          "totalVotes": 14181604
+        },
+        "CO": {
+          "demVotes": 1338870,
+          "gopVotes": 1202484,
+          "otherVotes": 238893,
+          "totalVotes": 2780247
+        },
+        "CT": {
+          "demVotes": 897572,
+          "gopVotes": 673215,
+          "otherVotes": 74133,
+          "totalVotes": 1644920
+        },
+        "DC": {
+          "demVotes": 282830,
+          "gopVotes": 12723,
+          "otherVotes": 15715,
+          "totalVotes": 311268
+        },
+        "DE": {
+          "demVotes": 235603,
+          "gopVotes": 185127,
+          "otherVotes": 23084,
+          "totalVotes": 443814
+        },
+        "FL": {
+          "demVotes": 4504975,
+          "gopVotes": 4617886,
+          "otherVotes": 297178,
+          "totalVotes": 9420039
+        },
+        "GA": {
+          "demVotes": 1877963,
+          "gopVotes": 2089104,
+          "otherVotes": 147665,
+          "totalVotes": 4114732
+        },
+        "HI": {
+          "demVotes": 266891,
+          "gopVotes": 128847,
+          "otherVotes": 33199,
+          "totalVotes": 428937
+        },
+        "IA": {
+          "demVotes": 653669,
+          "gopVotes": 800983,
+          "otherVotes": 111379,
+          "totalVotes": 1566031
+        },
+        "ID": {
+          "demVotes": 189765,
+          "gopVotes": 409055,
+          "otherVotes": 91435,
+          "totalVotes": 690255
+        },
+        "IL": {
+          "demVotes": 3090729,
+          "gopVotes": 2146015,
+          "otherVotes": 299680,
+          "totalVotes": 5536424
+        },
+        "IN": {
+          "demVotes": 1033126,
+          "gopVotes": 1557286,
+          "otherVotes": 144546,
+          "totalVotes": 2734958
+        },
+        "KS": {
+          "demVotes": 427005,
+          "gopVotes": 671018,
+          "otherVotes": 86379,
+          "totalVotes": 1184402
+        },
+        "KY": {
+          "demVotes": 628854,
+          "gopVotes": 1202971,
+          "otherVotes": 92324,
+          "totalVotes": 1924149
+        },
+        "LA": {
+          "demVotes": 780154,
+          "gopVotes": 1178638,
+          "otherVotes": 70240,
+          "totalVotes": 2029032
+        },
+        "MA": {
+          "demVotes": 1995196,
+          "gopVotes": 1090893,
+          "otherVotes": 238957,
+          "totalVotes": 3325046
+        },
+        "MD": {
+          "demVotes": 1677928,
+          "gopVotes": 943169,
+          "otherVotes": 160349,
+          "totalVotes": 2781446
+        },
+        "ME": {
+          "demVotes": 357735,
+          "gopVotes": 335593,
+          "otherVotes": 54599,
+          "totalVotes": 747927
+        },
+        "MI": {
+          "demVotes": 2268839,
+          "gopVotes": 2279543,
+          "otherVotes": 250902,
+          "totalVotes": 4799284
+        },
+        "MN": {
+          "demVotes": 1367716,
+          "gopVotes": 1322951,
+          "otherVotes": 254146,
+          "totalVotes": 2944813
+        },
+        "MO": {
+          "demVotes": 1071068,
+          "gopVotes": 1594511,
+          "otherVotes": 143026,
+          "totalVotes": 2808605
+        },
+        "MS": {
+          "demVotes": 485131,
+          "gopVotes": 700714,
+          "otherVotes": 23512,
+          "totalVotes": 1209357
+        },
+        "MT": {
+          "demVotes": 177709,
+          "gopVotes": 279240,
+          "otherVotes": 40198,
+          "totalVotes": 497147
+        },
+        "NC": {
+          "demVotes": 2189316,
+          "gopVotes": 2362631,
+          "otherVotes": 189617,
+          "totalVotes": 4741564
+        },
+        "ND": {
+          "demVotes": 93758,
+          "gopVotes": 216794,
+          "otherVotes": 33808,
+          "totalVotes": 344360
+        },
+        "NE": {
+          "demVotes": 284494,
+          "gopVotes": 495961,
+          "otherVotes": 63772,
+          "totalVotes": 844227
+        },
+        "NH": {
+          "demVotes": 348526,
+          "gopVotes": 345790,
+          "otherVotes": 49980,
+          "totalVotes": 744296
+        },
+        "NJ": {
+          "demVotes": 2148278,
+          "gopVotes": 1601933,
+          "otherVotes": 123835,
+          "totalVotes": 3874046
+        },
+        "NM": {
+          "demVotes": 385234,
+          "gopVotes": 319667,
+          "otherVotes": 93418,
+          "totalVotes": 798319
+        },
+        "NV": {
+          "demVotes": 539260,
+          "gopVotes": 512058,
+          "otherVotes": 74067,
+          "totalVotes": 1125385
+        },
+        "NY": {
+          "demVotes": 4556118,
+          "gopVotes": 2819533,
+          "otherVotes": 345791,
+          "totalVotes": 7721442
+        },
+        "OH": {
+          "demVotes": 2394164,
+          "gopVotes": 2841005,
+          "otherVotes": 261318,
+          "totalVotes": 5496487
+        },
+        "OK": {
+          "demVotes": 420375,
+          "gopVotes": 949136,
+          "otherVotes": 83481,
+          "totalVotes": 1452992
+        },
+        "OR": {
+          "demVotes": 1002106,
+          "gopVotes": 782403,
+          "otherVotes": 216827,
+          "totalVotes": 2001336
+        },
+        "PA": {
+          "demVotes": 2926441,
+          "gopVotes": 2970733,
+          "otherVotes": 268304,
+          "totalVotes": 6165478
+        },
+        "RI": {
+          "demVotes": 252525,
+          "gopVotes": 180543,
+          "otherVotes": 31076,
+          "totalVotes": 464144
+        },
+        "SC": {
+          "demVotes": 855373,
+          "gopVotes": 1155389,
+          "otherVotes": 92265,
+          "totalVotes": 2103027
+        },
+        "SD": {
+          "demVotes": 117458,
+          "gopVotes": 227721,
+          "otherVotes": 24914,
+          "totalVotes": 370093
+        },
+        "TN": {
+          "demVotes": 870695,
+          "gopVotes": 1522925,
+          "otherVotes": 114407,
+          "totalVotes": 2508027
+        },
+        "TX": {
+          "demVotes": 3877868,
+          "gopVotes": 4685047,
+          "otherVotes": 406311,
+          "totalVotes": 8969226
+        },
+        "UT": {
+          "demVotes": 310676,
+          "gopVotes": 515231,
+          "otherVotes": 305523,
+          "totalVotes": 1131430
+        },
+        "VA": {
+          "demVotes": 1981473,
+          "gopVotes": 1769443,
+          "otherVotes": 233715,
+          "totalVotes": 3984631
+        },
+        "VT": {
+          "demVotes": 178573,
+          "gopVotes": 95369,
+          "otherVotes": 41125,
+          "totalVotes": 315067
+        },
+        "WA": {
+          "demVotes": 1742718,
+          "gopVotes": 1221747,
+          "otherVotes": 352554,
+          "totalVotes": 3317019
+        },
+        "WI": {
+          "demVotes": 1382536,
+          "gopVotes": 1405284,
+          "otherVotes": 188330,
+          "totalVotes": 2976150
+        },
+        "WV": {
+          "demVotes": 188794,
+          "gopVotes": 489371,
+          "otherVotes": 36258,
+          "totalVotes": 714423
+        },
+        "WY": {
+          "demVotes": 55973,
+          "gopVotes": 174419,
+          "otherVotes": 25457,
+          "totalVotes": 255849
+        }
+      }
+    },
+    "2020": {
+      "reportingUnits": 3154,
+      "mappedUnits": 3153,
+      "unmappedUnits": 1,
+      "demVotes": 81283501,
+      "gopVotes": 74223975,
+      "otherVotes": 2922155,
+      "totalVotes": 158429631,
+      "demShare": 0.5130574406248538,
+      "gopShare": 0.4684980614516485,
+      "states": {
+        "AK": {
+          "demVotes": 153778,
+          "gopVotes": 189951,
+          "otherVotes": 15801,
+          "totalVotes": 359530
+        },
+        "AL": {
+          "demVotes": 849624,
+          "gopVotes": 1441170,
+          "otherVotes": 32488,
+          "totalVotes": 2323282
+        },
+        "AR": {
+          "demVotes": 423932,
+          "gopVotes": 760647,
+          "otherVotes": 34490,
+          "totalVotes": 1219069
+        },
+        "AZ": {
+          "demVotes": 1672143,
+          "gopVotes": 1661686,
+          "otherVotes": 53497,
+          "totalVotes": 3387326
+        },
+        "CA": {
+          "demVotes": 11110639,
+          "gopVotes": 6006518,
+          "otherVotes": 384223,
+          "totalVotes": 17501380
+        },
+        "CO": {
+          "demVotes": 1804352,
+          "gopVotes": 1364607,
+          "otherVotes": 88021,
+          "totalVotes": 3256980
+        },
+        "CT": {
+          "demVotes": 1080831,
+          "gopVotes": 714717,
+          "otherVotes": 28309,
+          "totalVotes": 1823857
+        },
+        "DC": {
+          "demVotes": 317323,
+          "gopVotes": 18586,
+          "otherVotes": 8447,
+          "totalVotes": 344356
+        },
+        "DE": {
+          "demVotes": 296268,
+          "gopVotes": 200603,
+          "otherVotes": 7475,
+          "totalVotes": 504346
+        },
+        "FL": {
+          "demVotes": 5297045,
+          "gopVotes": 5668731,
+          "otherVotes": 101680,
+          "totalVotes": 11067456
+        },
+        "GA": {
+          "demVotes": 2473633,
+          "gopVotes": 2461854,
+          "otherVotes": 64473,
+          "totalVotes": 4999960
+        },
+        "HI": {
+          "demVotes": 366130,
+          "gopVotes": 196864,
+          "otherVotes": 11475,
+          "totalVotes": 574469
+        },
+        "IA": {
+          "demVotes": 759061,
+          "gopVotes": 897672,
+          "otherVotes": 34138,
+          "totalVotes": 1690871
+        },
+        "ID": {
+          "demVotes": 287021,
+          "gopVotes": 554119,
+          "otherVotes": 26794,
+          "totalVotes": 867934
+        },
+        "IL": {
+          "demVotes": 3471915,
+          "gopVotes": 2446891,
+          "otherVotes": 114938,
+          "totalVotes": 6033744
+        },
+        "IN": {
+          "demVotes": 1242498,
+          "gopVotes": 1729857,
+          "otherVotes": 60855,
+          "totalVotes": 3033210
+        },
+        "KS": {
+          "demVotes": 570323,
+          "gopVotes": 771406,
+          "otherVotes": 32257,
+          "totalVotes": 1373986
+        },
+        "KY": {
+          "demVotes": 772474,
+          "gopVotes": 1326646,
+          "otherVotes": 37648,
+          "totalVotes": 2136768
+        },
+        "LA": {
+          "demVotes": 856034,
+          "gopVotes": 1255776,
+          "otherVotes": 36252,
+          "totalVotes": 2148062
+        },
+        "MA": {
+          "demVotes": 2382202,
+          "gopVotes": 1167202,
+          "otherVotes": 81998,
+          "totalVotes": 3631402
+        },
+        "MD": {
+          "demVotes": 1985023,
+          "gopVotes": 976414,
+          "otherVotes": 75593,
+          "totalVotes": 3037030
+        },
+        "ME": {
+          "demVotes": 435072,
+          "gopVotes": 360737,
+          "otherVotes": 23652,
+          "totalVotes": 819461
+        },
+        "MI": {
+          "demVotes": 2804040,
+          "gopVotes": 2649852,
+          "otherVotes": 85410,
+          "totalVotes": 5539302
+        },
+        "MN": {
+          "demVotes": 1717077,
+          "gopVotes": 1484065,
+          "otherVotes": 76029,
+          "totalVotes": 3277171
+        },
+        "MO": {
+          "demVotes": 1253014,
+          "gopVotes": 1718736,
+          "otherVotes": 54212,
+          "totalVotes": 3025962
+        },
+        "MS": {
+          "demVotes": 539398,
+          "gopVotes": 756764,
+          "otherVotes": 17597,
+          "totalVotes": 1313759
+        },
+        "MT": {
+          "demVotes": 244786,
+          "gopVotes": 343602,
+          "otherVotes": 15286,
+          "totalVotes": 603674
+        },
+        "NC": {
+          "demVotes": 2684292,
+          "gopVotes": 2758775,
+          "otherVotes": 81737,
+          "totalVotes": 5524804
+        },
+        "ND": {
+          "demVotes": 115042,
+          "gopVotes": 235751,
+          "otherVotes": 11231,
+          "totalVotes": 362024
+        },
+        "NE": {
+          "demVotes": 374583,
+          "gopVotes": 556846,
+          "otherVotes": 24954,
+          "totalVotes": 956383
+        },
+        "NH": {
+          "demVotes": 424937,
+          "gopVotes": 365660,
+          "otherVotes": 15608,
+          "totalVotes": 806205
+        },
+        "NJ": {
+          "demVotes": 2608400,
+          "gopVotes": 1883313,
+          "otherVotes": 57744,
+          "totalVotes": 4549457
+        },
+        "NM": {
+          "demVotes": 501614,
+          "gopVotes": 401894,
+          "otherVotes": 20457,
+          "totalVotes": 923965
+        },
+        "NV": {
+          "demVotes": 703486,
+          "gopVotes": 669890,
+          "otherVotes": 32000,
+          "totalVotes": 1405376
+        },
+        "NY": {
+          "demVotes": 5244886,
+          "gopVotes": 3251997,
+          "otherVotes": 119978,
+          "totalVotes": 8616861
+        },
+        "OH": {
+          "demVotes": 2679165,
+          "gopVotes": 3154834,
+          "otherVotes": 88203,
+          "totalVotes": 5922202
+        },
+        "OK": {
+          "demVotes": 503890,
+          "gopVotes": 1020280,
+          "otherVotes": 36529,
+          "totalVotes": 1560699
+        },
+        "OR": {
+          "demVotes": 1340383,
+          "gopVotes": 958448,
+          "otherVotes": 75490,
+          "totalVotes": 2374321
+        },
+        "PA": {
+          "demVotes": 3458229,
+          "gopVotes": 3377674,
+          "otherVotes": 101073,
+          "totalVotes": 6936976
+        },
+        "RI": {
+          "demVotes": 307486,
+          "gopVotes": 199922,
+          "otherVotes": 10349,
+          "totalVotes": 517757
+        },
+        "SC": {
+          "demVotes": 1091541,
+          "gopVotes": 1385103,
+          "otherVotes": 36685,
+          "totalVotes": 2513329
+        },
+        "SD": {
+          "demVotes": 150471,
+          "gopVotes": 261043,
+          "otherVotes": 11095,
+          "totalVotes": 422609
+        },
+        "TN": {
+          "demVotes": 1143711,
+          "gopVotes": 1852475,
+          "otherVotes": 57665,
+          "totalVotes": 3053851
+        },
+        "TX": {
+          "demVotes": 5259126,
+          "gopVotes": 5890347,
+          "otherVotes": 165583,
+          "totalVotes": 11315056
+        },
+        "UT": {
+          "demVotes": 560282,
+          "gopVotes": 865140,
+          "otherVotes": 62867,
+          "totalVotes": 1488289
+        },
+        "VA": {
+          "demVotes": 2413568,
+          "gopVotes": 1962430,
+          "otherVotes": 84526,
+          "totalVotes": 4460524
+        },
+        "VT": {
+          "demVotes": 242820,
+          "gopVotes": 112704,
+          "otherVotes": 11904,
+          "totalVotes": 367428
+        },
+        "WA": {
+          "demVotes": 2369612,
+          "gopVotes": 1584651,
+          "otherVotes": 133368,
+          "totalVotes": 4087631
+        },
+        "WI": {
+          "demVotes": 1630866,
+          "gopVotes": 1610184,
+          "otherVotes": 56991,
+          "totalVotes": 3298041
+        },
+        "WV": {
+          "demVotes": 235984,
+          "gopVotes": 545382,
+          "otherVotes": 13365,
+          "totalVotes": 794731
+        },
+        "WY": {
+          "demVotes": 73491,
+          "gopVotes": 193559,
+          "otherVotes": 9715,
+          "totalVotes": 276765
+        }
+      }
+    },
+    "2024": {
+      "reportingUnits": 3153,
+      "mappedUnits": 3153,
+      "unmappedUnits": 0,
+      "demVotes": 75017613,
+      "gopVotes": 77302580,
+      "otherVotes": 2918109,
+      "totalVotes": 155238302,
+      "demShare": 0.483241648700847,
+      "gopShare": 0.49796074167314713,
+      "states": {
+        "AK": {
+          "demVotes": 140026,
+          "gopVotes": 184458,
+          "otherVotes": 13693,
+          "totalVotes": 338177
+        },
+        "AL": {
+          "demVotes": 772412,
+          "gopVotes": 1462616,
+          "otherVotes": 30062,
+          "totalVotes": 2265090
+        },
+        "AR": {
+          "demVotes": 396905,
+          "gopVotes": 759241,
+          "otherVotes": 26530,
+          "totalVotes": 1182676
+        },
+        "AZ": {
+          "demVotes": 1582860,
+          "gopVotes": 1770242,
+          "otherVotes": 37059,
+          "totalVotes": 3390161
+        },
+        "CA": {
+          "demVotes": 9276179,
+          "gopVotes": 6081697,
+          "otherVotes": 507599,
+          "totalVotes": 15865475
+        },
+        "CO": {
+          "demVotes": 1728159,
+          "gopVotes": 1377441,
+          "otherVotes": 87145,
+          "totalVotes": 3192745
+        },
+        "CT": {
+          "demVotes": 992053,
+          "gopVotes": 736918,
+          "otherVotes": 30039,
+          "totalVotes": 1759010
+        },
+        "DC": {
+          "demVotes": 294185,
+          "gopVotes": 21076,
+          "otherVotes": 10608,
+          "totalVotes": 325869
+        },
+        "DE": {
+          "demVotes": 289758,
+          "gopVotes": 214351,
+          "otherVotes": 8803,
+          "totalVotes": 512912
+        },
+        "FL": {
+          "demVotes": 4683038,
+          "gopVotes": 6110125,
+          "otherVotes": 100589,
+          "totalVotes": 10893752
+        },
+        "GA": {
+          "demVotes": 2548017,
+          "gopVotes": 2663117,
+          "otherVotes": 39771,
+          "totalVotes": 5250905
+        },
+        "HI": {
+          "demVotes": 313044,
+          "gopVotes": 193661,
+          "otherVotes": 9996,
+          "totalVotes": 516701
+        },
+        "IA": {
+          "demVotes": 707278,
+          "gopVotes": 927019,
+          "otherVotes": 29209,
+          "totalVotes": 1663506
+        },
+        "ID": {
+          "demVotes": 274972,
+          "gopVotes": 605246,
+          "otherVotes": 24839,
+          "totalVotes": 905057
+        },
+        "IL": {
+          "demVotes": 3062863,
+          "gopVotes": 2449079,
+          "otherVotes": 121368,
+          "totalVotes": 5633310
+        },
+        "IN": {
+          "demVotes": 1163603,
+          "gopVotes": 1720347,
+          "otherVotes": 52727,
+          "totalVotes": 2936677
+        },
+        "KS": {
+          "demVotes": 544853,
+          "gopVotes": 758802,
+          "otherVotes": 23936,
+          "totalVotes": 1327591
+        },
+        "KY": {
+          "demVotes": 704043,
+          "gopVotes": 1337494,
+          "otherVotes": 32993,
+          "totalVotes": 2074530
+        },
+        "LA": {
+          "demVotes": 766870,
+          "gopVotes": 1208505,
+          "otherVotes": 31600,
+          "totalVotes": 2006975
+        },
+        "MA": {
+          "demVotes": 2126518,
+          "gopVotes": 1251303,
+          "otherVotes": 95847,
+          "totalVotes": 3473668
+        },
+        "MD": {
+          "demVotes": 1902577,
+          "gopVotes": 1035550,
+          "otherVotes": 100207,
+          "totalVotes": 3038334
+        },
+        "ME": {
+          "demVotes": 435652,
+          "gopVotes": 377977,
+          "otherVotes": 17746,
+          "totalVotes": 831375
+        },
+        "MI": {
+          "demVotes": 2736533,
+          "gopVotes": 2816636,
+          "otherVotes": 111017,
+          "totalVotes": 5664186
+        },
+        "MN": {
+          "demVotes": 1656979,
+          "gopVotes": 1519032,
+          "otherVotes": 77909,
+          "totalVotes": 3253920
+        },
+        "MO": {
+          "demVotes": 1200599,
+          "gopVotes": 1751986,
+          "otherVotes": 42742,
+          "totalVotes": 2995327
+        },
+        "MS": {
+          "demVotes": 466668,
+          "gopVotes": 747744,
+          "otherVotes": 13596,
+          "totalVotes": 1228008
+        },
+        "MT": {
+          "demVotes": 231906,
+          "gopVotes": 352079,
+          "otherVotes": 19005,
+          "totalVotes": 602990
+        },
+        "NC": {
+          "demVotes": 2715375,
+          "gopVotes": 2898423,
+          "otherVotes": 85343,
+          "totalVotes": 5699141
+        },
+        "ND": {
+          "demVotes": 112327,
+          "gopVotes": 246505,
+          "otherVotes": 9323,
+          "totalVotes": 368155
+        },
+        "NE": {
+          "demVotes": 369995,
+          "gopVotes": 564816,
+          "otherVotes": 17371,
+          "totalVotes": 952182
+        },
+        "NH": {
+          "demVotes": 418488,
+          "gopVotes": 395523,
+          "otherVotes": 12178,
+          "totalVotes": 826189
+        },
+        "NJ": {
+          "demVotes": 2220713,
+          "gopVotes": 1968215,
+          "otherVotes": 83797,
+          "totalVotes": 4272725
+        },
+        "NM": {
+          "demVotes": 478802,
+          "gopVotes": 423391,
+          "otherVotes": 21210,
+          "totalVotes": 923403
+        },
+        "NV": {
+          "demVotes": 705197,
+          "gopVotes": 751205,
+          "otherVotes": 28438,
+          "totalVotes": 1484840
+        },
+        "NY": {
+          "demVotes": 4619195,
+          "gopVotes": 3578899,
+          "otherVotes": 64401,
+          "totalVotes": 8262495
+        },
+        "OH": {
+          "demVotes": 2533699,
+          "gopVotes": 3180116,
+          "otherVotes": 53973,
+          "totalVotes": 5767788
+        },
+        "OK": {
+          "demVotes": 499599,
+          "gopVotes": 1036213,
+          "otherVotes": 30361,
+          "totalVotes": 1566173
+        },
+        "OR": {
+          "demVotes": 1240600,
+          "gopVotes": 919480,
+          "otherVotes": 84413,
+          "totalVotes": 2244493
+        },
+        "PA": {
+          "demVotes": 3423042,
+          "gopVotes": 3543308,
+          "otherVotes": 92382,
+          "totalVotes": 7058732
+        },
+        "RI": {
+          "demVotes": 285156,
+          "gopVotes": 214406,
+          "otherVotes": 13824,
+          "totalVotes": 513386
+        },
+        "SC": {
+          "demVotes": 1028452,
+          "gopVotes": 1483747,
+          "otherVotes": 35941,
+          "totalVotes": 2548140
+        },
+        "SD": {
+          "demVotes": 146859,
+          "gopVotes": 272081,
+          "otherVotes": 9982,
+          "totalVotes": 428922
+        },
+        "TN": {
+          "demVotes": 1056265,
+          "gopVotes": 1966865,
+          "otherVotes": 40812,
+          "totalVotes": 3063942
+        },
+        "TX": {
+          "demVotes": 4835250,
+          "gopVotes": 6393597,
+          "otherVotes": 159827,
+          "totalVotes": 11388674
+        },
+        "UT": {
+          "demVotes": 562566,
+          "gopVotes": 883818,
+          "otherVotes": 42110,
+          "totalVotes": 1488494
+        },
+        "VA": {
+          "demVotes": 2333778,
+          "gopVotes": 2074097,
+          "otherVotes": 95413,
+          "totalVotes": 4503288
+        },
+        "VT": {
+          "demVotes": 235791,
+          "gopVotes": 119395,
+          "otherVotes": 14236,
+          "totalVotes": 369422
+        },
+        "WA": {
+          "demVotes": 2245849,
+          "gopVotes": 1530923,
+          "otherVotes": 147471,
+          "totalVotes": 3924243
+        },
+        "WI": {
+          "demVotes": 1668229,
+          "gopVotes": 1697626,
+          "otherVotes": 57063,
+          "totalVotes": 3422918
+        },
+        "WV": {
+          "demVotes": 214309,
+          "gopVotes": 533556,
+          "otherVotes": 14717,
+          "totalVotes": 762582
+        },
+        "WY": {
+          "demVotes": 69527,
+          "gopVotes": 192633,
+          "otherVotes": 6888,
+          "totalVotes": 269048
+        }
+      }
+    }
+  },
+  "unmappedReportingUnits": [
+    {
+      "year": 2000,
+      "state": "CT",
+      "county": "STATEWIDE WRITEIN",
+      "fips": null,
+      "demVotes": 0,
+      "gopVotes": 0,
+      "otherVotes": 0,
+      "totalVotes": 0
+    },
+    {
+      "year": 2000,
+      "state": "ME",
+      "county": "MAINE UOCAVA",
+      "fips": null,
+      "demVotes": 0,
+      "gopVotes": 0,
+      "otherVotes": 0,
+      "totalVotes": 0
+    },
+    {
+      "year": 2000,
+      "state": "RI",
+      "county": "FEDERAL PRECINCT",
+      "fips": null,
+      "demVotes": 0,
+      "gopVotes": 0,
+      "otherVotes": 0,
+      "totalVotes": 0
+    },
+    {
+      "year": 2004,
+      "state": "CT",
+      "county": "STATEWIDE WRITEIN",
+      "fips": null,
+      "demVotes": 0,
+      "gopVotes": 0,
+      "otherVotes": 0,
+      "totalVotes": 0
+    },
+    {
+      "year": 2004,
+      "state": "ME",
+      "county": "MAINE UOCAVA",
+      "fips": null,
+      "demVotes": 0,
+      "gopVotes": 0,
+      "otherVotes": 0,
+      "totalVotes": 0
+    },
+    {
+      "year": 2004,
+      "state": "RI",
+      "county": "FEDERAL PRECINCT",
+      "fips": null,
+      "demVotes": 0,
+      "gopVotes": 0,
+      "otherVotes": 0,
+      "totalVotes": 0
+    },
+    {
+      "year": 2008,
+      "state": "CT",
+      "county": "STATEWIDE WRITEIN",
+      "fips": null,
+      "demVotes": 0,
+      "gopVotes": 0,
+      "otherVotes": 0,
+      "totalVotes": 0
+    },
+    {
+      "year": 2008,
+      "state": "ME",
+      "county": "MAINE UOCAVA",
+      "fips": null,
+      "demVotes": 0,
+      "gopVotes": 0,
+      "otherVotes": 0,
+      "totalVotes": 0
+    },
+    {
+      "year": 2008,
+      "state": "RI",
+      "county": "FEDERAL PRECINCT",
+      "fips": null,
+      "demVotes": 0,
+      "gopVotes": 0,
+      "otherVotes": 0,
+      "totalVotes": 0
+    },
+    {
+      "year": 2012,
+      "state": "CT",
+      "county": "STATEWIDE WRITEIN",
+      "fips": null,
+      "demVotes": 0,
+      "gopVotes": 0,
+      "otherVotes": 918,
+      "totalVotes": 918
+    },
+    {
+      "year": 2012,
+      "state": "ME",
+      "county": "MAINE UOCAVA",
+      "fips": null,
+      "demVotes": 2071,
+      "gopVotes": 858,
+      "otherVotes": 125,
+      "totalVotes": 3054
+    },
+    {
+      "year": 2012,
+      "state": "RI",
+      "county": "FEDERAL PRECINCT",
+      "fips": null,
+      "demVotes": 268,
+      "gopVotes": 53,
+      "otherVotes": 12,
+      "totalVotes": 333
+    },
+    {
+      "year": 2016,
+      "state": "CT",
+      "county": "STATEWIDE WRITEIN",
+      "fips": null,
+      "demVotes": 0,
+      "gopVotes": 0,
+      "otherVotes": 2616,
+      "totalVotes": 2616
+    },
+    {
+      "year": 2016,
+      "state": "ME",
+      "county": "MAINE UOCAVA",
+      "fips": null,
+      "demVotes": 3017,
+      "gopVotes": 648,
+      "otherVotes": 321,
+      "totalVotes": 3986
+    },
+    {
+      "year": 2016,
+      "state": "RI",
+      "county": "FEDERAL PRECINCT",
+      "fips": null,
+      "demVotes": 637,
+      "gopVotes": 53,
+      "otherVotes": 38,
+      "totalVotes": 728
+    },
+    {
+      "year": 2020,
+      "state": "RI",
+      "county": "FEDERAL PRECINCT",
+      "fips": null,
+      "demVotes": 1276,
+      "gopVotes": 85,
+      "otherVotes": 13,
+      "totalVotes": 1374
+    }
+  ],
+  "reportedTotalMismatches": [
+    {
+      "year": 2000,
+      "state": "VA",
+      "county": "BEDFORD",
+      "fips": "51019",
+      "candidateTotal": 28590,
+      "reportedTotals": [
+        26149,
+        2441
+      ],
+      "difference": 2441
+    },
+    {
+      "year": 2000,
+      "state": "VA",
+      "county": "FAIRFAX",
+      "fips": "51059",
+      "candidateTotal": 423331,
+      "reportedTotals": [
+        413775,
+        9556
+      ],
+      "difference": 9556
+    },
+    {
+      "year": 2000,
+      "state": "VA",
+      "county": "FRANKLIN",
+      "fips": "51067",
+      "candidateTotal": 22020,
+      "reportedTotals": [
+        18829,
+        3191
+      ],
+      "difference": 3191
+    },
+    {
+      "year": 2000,
+      "state": "VA",
+      "county": "RICHMOND",
+      "fips": "51159",
+      "candidateTotal": 68875,
+      "reportedTotals": [
+        2949,
+        65926
+      ],
+      "difference": 2949
+    },
+    {
+      "year": 2000,
+      "state": "VA",
+      "county": "ROANOKE",
+      "fips": "51161",
+      "candidateTotal": 76259,
+      "reportedTotals": [
+        42817,
+        33442
+      ],
+      "difference": 33442
+    },
+    {
+      "year": 2004,
+      "state": "MO",
+      "county": "JACKSON",
+      "fips": "29095",
+      "candidateTotal": 315993,
+      "reportedTotals": [
+        174570,
+        141423
+      ],
+      "difference": 141423
+    },
+    {
+      "year": 2004,
+      "state": "VA",
+      "county": "BEDFORD",
+      "fips": "51019",
+      "candidateTotal": 33946,
+      "reportedTotals": [
+        31404,
+        2542
+      ],
+      "difference": 2542
+    },
+    {
+      "year": 2004,
+      "state": "VA",
+      "county": "FAIRFAX",
+      "fips": "51059",
+      "candidateTotal": 471925,
+      "reportedTotals": [
+        461379,
+        10546
+      ],
+      "difference": 10546
+    },
+    {
+      "year": 2004,
+      "state": "VA",
+      "county": "FRANKLIN",
+      "fips": "51067",
+      "candidateTotal": 25759,
+      "reportedTotals": [
+        22223,
+        3536
+      ],
+      "difference": 3536
+    },
+    {
+      "year": 2004,
+      "state": "VA",
+      "county": "RICHMOND",
+      "fips": "51159",
+      "candidateTotal": 77686,
+      "reportedTotals": [
+        3361,
+        74325
+      ],
+      "difference": 3361
+    },
+    {
+      "year": 2004,
+      "state": "VA",
+      "county": "ROANOKE",
+      "fips": "51161",
+      "candidateTotal": 82973,
+      "reportedTotals": [
+        46973,
+        36000
+      ],
+      "difference": 36000
+    },
+    {
+      "year": 2008,
+      "state": "MO",
+      "county": "JACKSON",
+      "fips": "29095",
+      "candidateTotal": 339266,
+      "reportedTotals": [
+        186047,
+        153219
+      ],
+      "difference": 153219
+    },
+    {
+      "year": 2008,
+      "state": "VA",
+      "county": "BEDFORD",
+      "fips": "51019",
+      "candidateTotal": 38564,
+      "reportedTotals": [
+        35830,
+        2734
+      ],
+      "difference": 2734
+    },
+    {
+      "year": 2008,
+      "state": "VA",
+      "county": "FAIRFAX",
+      "fips": "51059",
+      "candidateTotal": 527652,
+      "reportedTotals": [
+        516254,
+        11398
+      ],
+      "difference": 11398
+    },
+    {
+      "year": 2008,
+      "state": "VA",
+      "county": "FRANKLIN",
+      "fips": "51067",
+      "candidateTotal": 29828,
+      "reportedTotals": [
+        25401,
+        4427
+      ],
+      "difference": 4427
+    },
+    {
+      "year": 2008,
+      "state": "VA",
+      "county": "RICHMOND",
+      "fips": "51159",
+      "candidateTotal": 96830,
+      "reportedTotals": [
+        3745,
+        93085
+      ],
+      "difference": 3745
+    },
+    {
+      "year": 2008,
+      "state": "VA",
+      "county": "ROANOKE",
+      "fips": "51161",
+      "candidateTotal": 91747,
+      "reportedTotals": [
+        50975,
+        40772
+      ],
+      "difference": 40772
+    },
+    {
+      "year": 2012,
+      "state": "MO",
+      "county": "JACKSON",
+      "fips": "29095",
+      "candidateTotal": 311566,
+      "reportedTotals": [
+        174764,
+        136802
+      ],
+      "difference": 136802
+    },
+    {
+      "year": 2012,
+      "state": "VA",
+      "county": "BEDFORD",
+      "fips": "51019",
+      "candidateTotal": 40230,
+      "reportedTotals": [
+        37425,
+        2805
+      ],
+      "difference": 2805
+    },
+    {
+      "year": 2012,
+      "state": "VA",
+      "county": "FAIRFAX",
+      "fips": "51059",
+      "candidateTotal": 540916,
+      "reportedTotals": [
+        529287,
+        11629
+      ],
+      "difference": 11629
+    },
+    {
+      "year": 2012,
+      "state": "VA",
+      "county": "FRANKLIN",
+      "fips": "51067",
+      "candidateTotal": 31067,
+      "reportedTotals": [
+        26707,
+        4360
+      ],
+      "difference": 4360
+    },
+    {
+      "year": 2012,
+      "state": "VA",
+      "county": "RICHMOND",
+      "fips": "51159",
+      "candidateTotal": 101339,
+      "reportedTotals": [
+        3770,
+        97569
+      ],
+      "difference": 3770
+    },
+    {
+      "year": 2012,
+      "state": "VA",
+      "county": "ROANOKE",
+      "fips": "51161",
+      "candidateTotal": 91372,
+      "reportedTotals": [
+        51217,
+        40155
+      ],
+      "difference": 40155
+    },
+    {
+      "year": 2016,
+      "state": "MO",
+      "county": "JACKSON",
+      "fips": "29095",
+      "candidateTotal": 301876,
+      "reportedTotals": [
+        173275,
+        128601
+      ],
+      "difference": 128601
+    },
+    {
+      "year": 2016,
+      "state": "VA",
+      "county": "FAIRFAX",
+      "fips": "51059",
+      "candidateTotal": 563213,
+      "reportedTotals": [
+        551183,
+        12030
+      ],
+      "difference": 12030
+    },
+    {
+      "year": 2016,
+      "state": "VA",
+      "county": "FRANKLIN",
+      "fips": "51067",
+      "candidateTotal": 31041,
+      "reportedTotals": [
+        26971,
+        4070
+      ],
+      "difference": 4070
+    },
+    {
+      "year": 2016,
+      "state": "VA",
+      "county": "RICHMOND",
+      "fips": "51159",
+      "candidateTotal": 107145,
+      "reportedTotals": [
+        3661,
+        103484
+      ],
+      "difference": 3661
+    },
+    {
+      "year": 2016,
+      "state": "VA",
+      "county": "ROANOKE",
+      "fips": "51161",
+      "candidateTotal": 90955,
+      "reportedTotals": [
+        51489,
+        39466
+      ],
+      "difference": 39466
+    },
+    {
+      "year": 2020,
+      "state": "MO",
+      "county": "JACKSON",
+      "fips": "29095",
+      "candidateTotal": 333063,
+      "reportedTotals": [
+        196418,
+        136645
+      ],
+      "difference": 136645
+    },
+    {
+      "year": 2024,
+      "state": "CT",
+      "county": "HARTFORD",
+      "fips": "09003",
+      "candidateTotal": 429313,
+      "reportedTotals": [
+        429325
+      ],
+      "difference": -12
+    },
+    {
+      "year": 2024,
+      "state": "CT",
+      "county": "MIDDLESEX",
+      "fips": "09007",
+      "candidateTotal": 97518,
+      "reportedTotals": [
+        97519
+      ],
+      "difference": -1
+    },
+    {
+      "year": 2024,
+      "state": "CT",
+      "county": "NEW HAVEN",
+      "fips": "09009",
+      "candidateTotal": 397984,
+      "reportedTotals": [
+        397987
+      ],
+      "difference": -3
+    }
+  ]
+}
