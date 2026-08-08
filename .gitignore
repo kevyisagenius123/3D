@@ -1,0 +1,20 @@
+# Operating-system and editor metadata
+.DS_Store
+Thumbs.db
+*.log
+
+# The Pages repository contains a curated subset of the private build output.
+# Ignore broad application assets that are not used by either public atlas.
+/site/assets/models/
+/site/assets/textures/
+/site/templates/
+/site/gz_2010_us_040_00_500k.json
+/site/gz_2010_us_050_00_500k.json
+/site/logo-mind-of-politics.jpeg
+/site/data/rcp/
+/site/data/*county_demographics*.csv
+/site/data/county_results_*.csv
+/site/data/2024_county_results_upload.csv
+/site/data/ia_county_projection_selzer_rebase.csv
+/site/data/ks_county_projection_rebase.csv
+/site/data/state_demographics_2024.csv

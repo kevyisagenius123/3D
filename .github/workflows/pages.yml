@@ -24,6 +24,9 @@ jobs:
       - name: Check out compiled site
         uses: actions/checkout@v6
 
+      - name: Validate publication artifact
+        run: node scripts/validate-publication.mjs
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 

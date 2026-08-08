@@ -1,0 +1,11 @@
+* text=auto eol=lf
+
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.woff binary
+*.woff2 binary
+
+site/assets/** linguist-generated=true
+site/data/election-night/** linguist-generated=true -diff
+site/data/france-atlas/communes/** linguist-generated=true -diff

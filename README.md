@@ -1,11 +1,65 @@
-# 3D Presidential Election Atlases
+# Presidential Atlas
 
-This repository publishes the compiled GitHub Pages build. The TypeScript and
-React source is intentionally kept out of the public repository.
+[![Deploy election atlases to GitHub Pages](https://github.com/kevyisagenius123/3D/actions/workflows/pages.yml/badge.svg)](https://github.com/kevyisagenius123/3D/actions/workflows/pages.yml)
 
-- US atlas: `/3D/election-atlas`
-- France atlas: `/3D/france-atlas`
+An interactive, three-dimensional atlas for exploring presidential elections
+as geography, vote margin, turnout, and time.
 
-The US election-night experience runs from versioned, state-split replay data
-under `site/data/election-night/`. State timelines are loaded on demand so the
-full national archive is not part of the initial page load.
+## Explore
+
+| Experience | Description |
+| --- | --- |
+| [United States Atlas](https://kevyisagenius123.github.io/3D/election-atlas) | State and county results, swing, and a reconstructed 2020 election-night replay. |
+| [France Atlas](https://kevyisagenius123.github.io/3D/france-atlas) | 2022 presidential results by department and commune, round by round. |
+
+## Highlights
+
+- Three-dimensional state, county, department, and commune geography
+- Expressive party-margin scales designed for close and landslide results
+- State-to-county drill-down with clean terrain transitions
+- 2016, 2020, and 2024 United States result and swing views
+- A deterministic 2020 election-night reconstruction built from county return packets
+- Decision-desk context explaining outstanding vote and race-call constraints
+- Responsive controls for desktop, tablet, and mobile displays
+
+## Election-night replay
+
+The national timeline loads first. Individual state timelines are downloaded
+only when a state is opened, keeping the initial experience lightweight. The
+replay uses published final county returns, explicitly reconstructed
+intermediate batches, and documented race-call times where available.
+
+The reconstruction is an analytical historical experience—not a live result
+feed, an official tabulation, or a claim that modeled batches were published at
+their displayed intermediate timestamps. See [Data and methodology](docs/DATA_AND_METHODOLOGY.md).
+
+## Repository scope
+
+This repository is the curated, compiled distribution used by GitHub Pages.
+The private React, TypeScript, and Java source projects are intentionally not
+published here.
+
+```text
+.
+├── .github/               Pages workflow and issue templates
+├── docs/                  Public methodology
+├── site/
+│   ├── assets/            Minified production bundles
+│   ├── data/              Public election and geometry data
+│   ├── election-atlas/    United States route entry
+│   └── france-atlas/      France route entry
+└── README.md
+```
+
+Every push to `main` validates the publication boundary and deploys `site/` as
+an immutable Pages artifact. TypeScript, Java, JAR files, and source maps cause
+the deployment to fail.
+
+## Status and use
+
+Presidential Atlas is an independent data-visualization project and is not an
+official election authority or decision desk. Report reproducible problems
+through [GitHub Issues](https://github.com/kevyisagenius123/3D/issues).
+
+No open-source license is granted for the compiled application. Third-party
+datasets remain subject to their respective source terms.

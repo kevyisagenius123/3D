@@ -1,0 +1,46 @@
+name: Atlas bug report
+description: Report a reproducible problem with an Atlas page or replay.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: dropdown
+    id: experience
+    attributes:
+      label: Experience
+      options:
+        - United States Atlas
+        - 2020 election-night replay
+        - France Atlas
+        - GitHub Pages deployment
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: "Example: Chrome 128 on Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the election year, view, state or department, and replay time when relevant.
+      placeholder: |
+        1. Open …
+        2. Select …
+        3. Observe …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or additional context
+      description: Drag screenshots here and include any visible error message.
