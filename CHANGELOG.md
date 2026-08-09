@@ -2,6 +2,12 @@
 
 All notable public Atlas releases are documented here.
 
+## [1.1.1] - 2026-08-09
+
+### Added
+
+- United States election-night and France overview imagery to the repository presentation
+
 ## [1.1.0] - 2026-08-09
 
 ### Added
@@ -30,5 +36,6 @@ All notable public Atlas releases are documented here.
 - France 2022 department and commune result views
 - Curated compiled-only GitHub Pages distribution
 
+[1.1.1]: https://github.com/kevyisagenius123/3D/tree/v1.1.1
 [1.1.0]: https://github.com/kevyisagenius123/3D/tree/v1.1.0
 [1.0.0]: https://github.com/kevyisagenius123/3D/commits/main

@@ -7,12 +7,25 @@
 An interactive, three-dimensional atlas for exploring presidential elections
 as geography, vote margin, turnout, and time.
 
+[![The 2020 United States election-night replay showing Wisconsin called for Biden above the national decision desk](docs/images/us-election-night-2020.png)](https://kevyisagenius123.github.io/3D/election-atlas)
+
+*Thousands of reconstructed county return batches recompute state margins,
+decision status, outstanding vote, and the electoral tally as the count moves.*
+
 ## Explore
 
 | Experience | Description |
 | --- | --- |
 | [United States Atlas](https://kevyisagenius123.github.io/3D/election-atlas) | State and county results, swing, and a reconstructed 2020 election-night replay. |
 | [France Atlas](https://kevyisagenius123.github.io/3D/france-atlas) | 2022 results and reconstructed election night by department, territory, and commune. |
+
+### France, territory by territory
+
+<p align="center">
+  <a href="https://kevyisagenius123.github.io/3D/france-atlas">
+    <img src="docs/images/france-atlas-2022.png" width="820" alt="France 2022 presidential atlas showing the three-dimensional metropolitan departments and ten overseas territory insets">
+  </a>
+</p>
 
 ## Highlights
 
