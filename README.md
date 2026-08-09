@@ -19,6 +19,8 @@ as geography, vote margin, turnout, and time.
 - State-to-county drill-down with clean terrain transitions
 - 2016, 2020, and 2024 United States result and swing views
 - A deterministic 2020 election-night reconstruction built from county return packets
+- A 2022 France replay with modeled poll closings, staggered publication waves, and official polling-bureau totals
+- Clickable overseas territory insets with commune-level drill-downs
 - Decision-desk context explaining outstanding vote and race-call constraints
 - Responsive controls for desktop, tablet, and mobile displays
 
@@ -32,6 +34,12 @@ intermediate batches, and documented race-call times where available.
 The reconstruction is an analytical historical experience—not a live result
 feed, an official tabulation, or a claim that modeled batches were published at
 their displayed intermediate timestamps. See [Data and methodology](docs/DATA_AND_METHODOLOGY.md).
+
+The France replay begins before polls close, observes the 20:00 publication
+embargo, and then reveals official 2022 polling-bureau totals through a
+deterministic reconstruction. Poll-closing groups, reporting order, and exact
+timestamps are modeled because a complete archived live return feed is not
+available.
 
 ## Repository scope
 

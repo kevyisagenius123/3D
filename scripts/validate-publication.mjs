@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url'
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const siteRoot = path.join(repositoryRoot, 'site')
 const replayRoot = path.join(siteRoot, 'data', 'election-night', 'v1', 'replays', '2020')
+const franceReplayRoot = path.join(siteRoot, 'data', 'france-atlas', 'replay')
 const publicBasePath = '/3D/'
 
 const routeEntrypoints = [
@@ -18,6 +19,8 @@ const requiredFiles = [
   ...routeEntrypoints,
   path.join(replayRoot, 'manifest.json'),
   path.join(replayRoot, 'national-timeline.json'),
+  path.join(franceReplayRoot, 'round-1.json'),
+  path.join(franceReplayRoot, 'round-2.json'),
 ]
 
 const allowedTopLevelEntries = new Set([
@@ -235,6 +238,50 @@ if (nationalStateCodes.size !== stateCodes.size || [...stateCodes].some((stateCo
   throw new Error('National timeline jurisdictions do not match the state replay manifest.')
 }
 
+for (const round of [1, 2]) {
+  const replayPath = path.join(franceReplayRoot, `round-${round}.json`)
+  const replay = JSON.parse(fs.readFileSync(replayPath, 'utf8'))
+  if (
+    replay.schemaVersion !== 'france-presidential-replay/v1'
+    || replay.round !== round
+    || !Array.isArray(replay.jurisdictions)
+    || !Array.isArray(replay.pollCloseHours)
+    || !Array.isArray(replay.events)
+  ) {
+    throw new Error(`France round ${round} replay schema is invalid.`)
+  }
+  if (replay.pollCloseHours.length !== replay.jurisdictions.length) {
+    throw new Error(`France round ${round} poll-closing groups do not match its jurisdictions.`)
+  }
+  const embargoOffset = (
+    Date.parse(replay.timeline.embargoLiftsAt) - Date.parse(replay.startsAt)
+  ) / 1_000
+  const totals = new Array(2 + replay.candidateIds.length).fill(0)
+  let previousOffset = -1
+  for (const event of replay.events) {
+    if (!Number.isInteger(event[0]) || event[0] < previousOffset) {
+      throw new Error(`France round ${round} return timestamps are not ordered.`)
+    }
+    if (event[0] < embargoOffset) {
+      throw new Error(`France round ${round} publishes a return before the 20:00 embargo.`)
+    }
+    if (!replay.jurisdictions[event[1]]) {
+      throw new Error(`France round ${round} contains an unknown jurisdiction index.`)
+    }
+    event.slice(4).forEach((votes, index) => {
+      if (!Number.isInteger(votes) || votes < 0) {
+        throw new Error(`France round ${round} contains an invalid vote batch.`)
+      }
+      totals[index] += votes
+    })
+    previousOffset = event[0]
+  }
+  const expected = [replay.final.blank, replay.final.invalid, ...replay.final.candidateVotes]
+  if (totals.some((votes, index) => votes !== expected[index])) {
+    throw new Error(`France round ${round} replay does not reconcile to its official endpoint.`)
+  }
+}
+
 process.stdout.write(
-  `Validated ${routeEntrypoints.length} routes, ${publicFiles.length} public files, ${stateCodes.size} state replays, and the national timeline.\n`,
+  `Validated ${routeEntrypoints.length} routes, ${publicFiles.length} public files, ${stateCodes.size} state replays, the national timeline, and both France replays.\n`,
 )
