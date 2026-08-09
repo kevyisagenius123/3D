@@ -52,8 +52,9 @@ published here.
 ```
 
 Every push to `main` validates the publication boundary and deploys `site/` as
-an immutable Pages artifact. TypeScript, Java, JAR files, and source maps cause
-the deployment to fail.
+an immutable Pages artifact. The gate verifies every route's local assets,
+allowlists public file types and directories, checks all replay jurisdictions,
+scans for common secret signatures, and rejects source or source-map artifacts.
 
 ## Status and use
 

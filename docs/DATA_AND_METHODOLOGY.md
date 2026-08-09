@@ -36,6 +36,15 @@ The reconstruction is intended to explain how geography, vote type, and
 outstanding ballots changed the apparent race. It is not an official archive of
 every intermediate county update.
 
+### Public replay artifact policy
+
+The canonical state-split replay output is intentionally distributed as part of
+the browser-delivered Atlas and its reproducibility record. Visitors can inspect
+and download those generated timelines because the browser must receive them to
+render the experience. The private generator, reconstruction implementation,
+and application source are not included in this repository. Public access to a
+generated replay file does not grant an open-source license to the application.
+
 ## France results
 
 The France Atlas presents the 2022 presidential election by department and
