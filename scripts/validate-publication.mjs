@@ -6,7 +6,8 @@ import { fileURLToPath } from 'node:url'
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const siteRoot = path.join(repositoryRoot, 'site')
 const replayRoot = path.join(siteRoot, 'data', 'election-night', 'v1', 'replays', '2020')
-const franceReplayRoot = path.join(siteRoot, 'data', 'france-atlas', 'replay')
+const franceRoot = path.join(siteRoot, 'data', 'france-atlas')
+const franceReplayRoot = path.join(franceRoot, 'replay')
 const publicBasePath = '/3D/'
 
 const routeEntrypoints = [
@@ -15,12 +16,20 @@ const routeEntrypoints = [
   path.join(siteRoot, 'election-atlas', 'index.html'),
   path.join(siteRoot, 'france-atlas', 'index.html'),
 ]
+const routeMetadata = new Map([
+  [path.join(siteRoot, 'index.html'), { lang: 'en', title: 'Presidential Atlas | Interactive 3D Election Maps' }],
+  [path.join(siteRoot, '404.html'), { lang: 'en', title: 'Presidential Atlas' }],
+  [path.join(siteRoot, 'election-atlas', 'index.html'), { lang: 'en', title: 'United States Presidential Atlas | 2016–2024' }],
+  [path.join(siteRoot, 'france-atlas', 'index.html'), { lang: 'fr', title: 'Atlas présidentiel français | Élection 2022' }],
+])
 const requiredFiles = [
   ...routeEntrypoints,
   path.join(replayRoot, 'manifest.json'),
   path.join(replayRoot, 'national-timeline.json'),
   path.join(franceReplayRoot, 'round-1.json'),
   path.join(franceReplayRoot, 'round-2.json'),
+  path.join(franceRoot, 'manifest.json'),
+  path.join(franceRoot, 'departments.geojson'),
 ]
 
 const allowedTopLevelEntries = new Set([
@@ -187,11 +196,32 @@ for (const filePath of publicFiles) {
     if (detectedSecret) {
       throw new Error(`Possible ${detectedSecret[0]} found in ${publicationPath(filePath)}`)
     }
+    if (extension === '.js') {
+      const moduleReferences = [
+        ...contents.matchAll(/(?:\bfrom\s*|\bimport\s*\()\s*["'](\.[^"']+)["']/g),
+      ]
+      for (const [, reference] of moduleReferences) {
+        const referencedModule = path.resolve(path.dirname(filePath), reference)
+        if (!fs.existsSync(referencedModule)) {
+          throw new Error(`${publicationPath(filePath)} references missing module ${reference}.`)
+        }
+      }
+    }
   }
 }
 
 for (const entrypoint of routeEntrypoints) {
   const html = fs.readFileSync(entrypoint, 'utf8')
+  const metadata = routeMetadata.get(entrypoint)
+  const language = html.match(/<html\s+[^>]*lang=["']([^"']+)["']/i)?.[1]
+  const title = html.match(/<title>([^<]+)<\/title>/i)?.[1]
+  const description = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i)?.[1]
+  if (!metadata || language !== metadata.lang || title !== metadata.title) {
+    throw new Error(`${publicationPath(entrypoint)} has incorrect language or title metadata.`)
+  }
+  if (!description || description.length < 50) {
+    throw new Error(`${publicationPath(entrypoint)} needs a descriptive meta description.`)
+  }
   const references = [...html.matchAll(/\b(?:href|src)\s*=\s*["']([^"']+)["']/gi)]
   if (references.length === 0) {
     throw new Error(`Route entrypoint contains no asset references: ${publicationPath(entrypoint)}`)
@@ -282,6 +312,37 @@ for (const round of [1, 2]) {
   }
 }
 
+const franceManifest = JSON.parse(fs.readFileSync(path.join(franceRoot, 'manifest.json'), 'utf8'))
+const franceDepartments = JSON.parse(fs.readFileSync(path.join(franceRoot, 'departments.geojson'), 'utf8'))
+const expectedOverseasCodes = ['971', '972', '973', '974', '975', '976', '978', '986', '987', '988']
+if (!Array.isArray(franceDepartments.features) || franceDepartments.features.length !== 106) {
+  throw new Error(`Expected 106 France department and territory features, found ${franceDepartments.features?.length ?? 0}.`)
+}
+const overseasCodes = franceDepartments.features
+  .filter((feature) => feature.properties?.isOverseas)
+  .map((feature) => String(feature.properties.code))
+  .sort()
+if (JSON.stringify(overseasCodes) !== JSON.stringify(expectedOverseasCodes)) {
+  throw new Error('France overseas inset codes are incomplete or unexpected.')
+}
+for (const code of expectedOverseasCodes) {
+  const communePath = path.join(franceRoot, 'communes', `${code}.geojson`)
+  if (!fs.existsSync(communePath)) {
+    throw new Error(`France overseas commune geometry is missing for ${code}.`)
+  }
+  const collection = JSON.parse(fs.readFileSync(communePath, 'utf8'))
+  if (!Array.isArray(collection.features) || collection.features.length === 0) {
+    throw new Error(`France overseas commune geometry is empty for ${code}.`)
+  }
+}
+if (
+  franceManifest.audit?.metropolitanDepartmentFeatures !== 96
+  || franceManifest.audit?.overseasDepartmentFeatures !== 10
+  || franceManifest.audit?.departmentsWithCommuneFiles !== 106
+) {
+  throw new Error('France manifest geography audit does not match the publication inventory.')
+}
+
 process.stdout.write(
-  `Validated ${routeEntrypoints.length} routes, ${publicFiles.length} public files, ${stateCodes.size} state replays, the national timeline, and both France replays.\n`,
+  `Validated ${routeEntrypoints.length} routes, ${publicFiles.length} public files, ${stateCodes.size} state replays, both France replays, and 10 overseas insets.\n`,
 )

@@ -52,6 +52,13 @@ commune for both rounds. Candidate color identifies the local leader; intensity
 represents the leader's margin over the second-place candidate. Department
 selection reveals the underlying commune geography.
 
+Its election-night mode reconstructs official polling-bureau totals through a
+modeled 19:00 and 20:00 closing schedule, a 20:00 publication embargo, and
+staggered departmental release waves. Overseas territories appear as clickable
+insets and remain included in the national count. See the dedicated
+[France 2022 methodology](FRANCE_2022_METHODOLOGY.md) for source links, timing
+assumptions, geographic coverage, replay logic, and validation rules.
+
 ## Geometry and presentation
 
 United States boundaries are based on Census and US Atlas geometry. France

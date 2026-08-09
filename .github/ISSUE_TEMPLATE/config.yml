@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Data and methodology
+    url: https://github.com/kevyisagenius123/3D/blob/main/docs/DATA_AND_METHODOLOGY.md
+    about: Read how official and reconstructed election data are separated.
+  - name: France 2022 methodology
+    url: https://github.com/kevyisagenius123/3D/blob/main/docs/FRANCE_2022_METHODOLOGY.md
+    about: Review the France result, timing, overseas, and replay methodology.

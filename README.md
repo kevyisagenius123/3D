@@ -1,6 +1,8 @@
 # Presidential Atlas
 
 [![Deploy election atlases to GitHub Pages](https://github.com/kevyisagenius123/3D/actions/workflows/pages.yml/badge.svg)](https://github.com/kevyisagenius123/3D/actions/workflows/pages.yml)
+[![Validate public Atlas package](https://github.com/kevyisagenius123/3D/actions/workflows/quality.yml/badge.svg)](https://github.com/kevyisagenius123/3D/actions/workflows/quality.yml)
+[![Version](https://img.shields.io/github/v/tag/kevyisagenius123/3D?label=version)](https://github.com/kevyisagenius123/3D/tags)
 
 An interactive, three-dimensional atlas for exploring presidential elections
 as geography, vote margin, turnout, and time.
@@ -10,7 +12,7 @@ as geography, vote margin, turnout, and time.
 | Experience | Description |
 | --- | --- |
 | [United States Atlas](https://kevyisagenius123.github.io/3D/election-atlas) | State and county results, swing, and a reconstructed 2020 election-night replay. |
-| [France Atlas](https://kevyisagenius123.github.io/3D/france-atlas) | 2022 presidential results by department and commune, round by round. |
+| [France Atlas](https://kevyisagenius123.github.io/3D/france-atlas) | 2022 results and reconstructed election night by department, territory, and commune. |
 
 ## Highlights
 
@@ -40,6 +42,13 @@ embargo, and then reveals official 2022 polling-bureau totals through a
 deterministic reconstruction. Poll-closing groups, reporting order, and exact
 timestamps are modeled because a complete archived live return feed is not
 available.
+
+## Documentation
+
+- [Data and methodology](docs/DATA_AND_METHODOLOGY.md)
+- [France 2022 replay methodology](docs/FRANCE_2022_METHODOLOGY.md)
+- [Changelog](CHANGELOG.md)
+- [Contributing and result corrections](CONTRIBUTING.md)
 
 ## Repository scope
 

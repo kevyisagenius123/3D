@@ -1,0 +1,63 @@
+name: Result correction
+description: Report a county, commune, territory, state, or national result that appears incorrect.
+title: "[Result correction]: "
+labels:
+  - data
+  - correction
+body:
+  - type: dropdown
+    id: atlas
+    attributes:
+      label: Atlas
+      options:
+        - United States Atlas
+        - France Atlas
+    validations:
+      required: true
+  - type: input
+    id: election
+    attributes:
+      label: Election and round
+      placeholder: "Example: France 2022, first round"
+    validations:
+      required: true
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction
+      description: Include the state, county, department, commune, territory, and code when known.
+      placeholder: "Example: Guadeloupe, Les Abymes, 97101"
+    validations:
+      required: true
+  - type: textarea
+    id: displayed
+    attributes:
+      label: Atlas value
+      description: State exactly what the Atlas currently displays.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected value
+      description: State the corrected candidate total, share, turnout, margin, winner, or other field.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Authoritative source
+      description: Link directly to an election authority, official dataset, or similarly authoritative record.
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: textarea
+    id: replay
+    attributes:
+      label: Replay context
+      description: If this concerns election-night mode, include the displayed date, time, view, and reporting percentage.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshot or additional evidence
+      description: Drag a screenshot here and explain any calculation needed to reproduce the discrepancy.
