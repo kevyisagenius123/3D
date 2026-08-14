@@ -8,6 +8,8 @@ const siteRoot = path.join(repositoryRoot, 'site')
 const replayRoot = path.join(siteRoot, 'data', 'election-night', 'v1', 'replays', '2020')
 const franceRoot = path.join(siteRoot, 'data', 'france-atlas')
 const franceReplayRoot = path.join(franceRoot, 'replay')
+const canadaRoot = path.join(siteRoot, 'data', 'canada-atlas')
+const canadaReplayPath = path.join(canadaRoot, 'replay', '2025.json')
 const publicBasePath = '/3D/'
 
 const routeEntrypoints = [
@@ -15,12 +17,14 @@ const routeEntrypoints = [
   path.join(siteRoot, '404.html'),
   path.join(siteRoot, 'election-atlas', 'index.html'),
   path.join(siteRoot, 'france-atlas', 'index.html'),
+  path.join(siteRoot, 'canada-atlas', 'index.html'),
 ]
 const routeMetadata = new Map([
   [path.join(siteRoot, 'index.html'), { lang: 'en', title: 'Presidential Atlas | Interactive 3D Election Maps' }],
   [path.join(siteRoot, '404.html'), { lang: 'en', title: 'Presidential Atlas' }],
   [path.join(siteRoot, 'election-atlas', 'index.html'), { lang: 'en', title: 'United States Presidential Atlas | 2016–2024' }],
   [path.join(siteRoot, 'france-atlas', 'index.html'), { lang: 'fr', title: 'Atlas présidentiel français | Élection 2022' }],
+  [path.join(siteRoot, 'canada-atlas', 'index.html'), { lang: 'en', title: 'Canada Federal Election Atlas | 2025' }],
 ])
 const requiredFiles = [
   ...routeEntrypoints,
@@ -30,6 +34,9 @@ const requiredFiles = [
   path.join(franceReplayRoot, 'round-2.json'),
   path.join(franceRoot, 'manifest.json'),
   path.join(franceRoot, 'departments.geojson'),
+  path.join(canadaRoot, 'manifest.json'),
+  path.join(canadaRoot, 'ridings.geojson'),
+  canadaReplayPath,
 ]
 
 const allowedTopLevelEntries = new Set([
@@ -39,6 +46,7 @@ const allowedTopLevelEntries = new Set([
   'data',
   'election-atlas',
   'france-atlas',
+  'canada-atlas',
   'index.html',
 ])
 const allowedExtensions = new Set([
@@ -343,6 +351,177 @@ if (
   throw new Error('France manifest geography audit does not match the publication inventory.')
 }
 
+const canadaManifest = JSON.parse(fs.readFileSync(path.join(canadaRoot, 'manifest.json'), 'utf8'))
+const canadaRidings = JSON.parse(fs.readFileSync(path.join(canadaRoot, 'ridings.geojson'), 'utf8'))
+const canadaReplay = JSON.parse(fs.readFileSync(canadaReplayPath, 'utf8'))
+const canadaPartyIds = Object.keys(canadaManifest.partyMeta ?? {})
+if (
+  canadaManifest.schemaVersion !== 'canada-federal-atlas/v1'
+  || canadaManifest.seatsTotal !== 343
+  || canadaManifest.majority !== 172
+  || !Array.isArray(canadaRidings.features)
+  || canadaRidings.features.length !== 343
+) {
+  throw new Error('Canada Atlas manifest, seat threshold, or riding inventory is invalid.')
+}
+const canadaRidingCodes = new Set()
+const canadaMappedGeometry = []
+const canadaUsedGeometryResultKeys = new Set()
+const canadaGeometryStatusCounts = new Map()
+let canadaMappedGeometryFeatures = 0
+let canadaNonReportingGeometryFeatures = 0
+let canadaUnmatchedGeometryFeatures = 0
+const canadaTotals = {
+  electors: 0,
+  voters: 0,
+  validVotes: 0,
+  rejected: 0,
+  partyVotes: Object.fromEntries(canadaPartyIds.map((partyId) => [partyId, 0])),
+  seats: Object.fromEntries(canadaPartyIds.map((partyId) => [partyId, 0])),
+}
+for (const feature of canadaRidings.features) {
+  const code = String(feature.properties?.code ?? '')
+  const result = feature.properties?.result
+  if (!/^\d{5}$/.test(code) || canadaRidingCodes.has(code) || !result) {
+    throw new Error(`Invalid or duplicate Canada riding: ${code}`)
+  }
+  canadaRidingCodes.add(code)
+  canadaTotals.electors += result.electors
+  canadaTotals.voters += result.voters
+  canadaTotals.validVotes += result.totalVotes
+  canadaTotals.rejected += result.rejected
+  for (const partyId of canadaPartyIds) canadaTotals.partyVotes[partyId] += result.partyVotes[partyId]
+  canadaTotals.seats[result.winnerPartyId] += 1
+
+  const pollingPath = path.join(canadaRoot, 'polling-divisions', `${code}.geojson`)
+  if (!fs.existsSync(pollingPath)) throw new Error(`Canada polling-division file is missing for ${code}.`)
+  const collection = JSON.parse(fs.readFileSync(pollingPath, 'utf8'))
+  if (collection.ridingCode !== code || !Array.isArray(collection.features)) {
+    throw new Error(`Canada polling-division file is malformed for ${code}.`)
+  }
+  const expectedException = canadaManifest.audit.ridingsWithoutPollingGeometry.includes(code)
+  if (expectedException !== (collection.features.length === 0)) {
+    throw new Error(`Canada polling geometry exception is not documented correctly for ${code}.`)
+  }
+  for (const pollingFeature of collection.features) {
+    const props = pollingFeature.properties ?? {}
+    const status = props.resultStatus ?? 'unmatched'
+    canadaGeometryStatusCounts.set(status, (canadaGeometryStatusCounts.get(status) ?? 0) + 1)
+    if (!props.result) {
+      if (Array.isArray(props.resultPollNumbers) && props.resultPollNumbers.length) {
+        throw new Error(`${props.code} has result aliases but no displayed result.`)
+      }
+      if (status === 'unmatched' || status === 'unresolved-combination') canadaUnmatchedGeometryFeatures += 1
+      else canadaNonReportingGeometryFeatures += 1
+      continue
+    }
+    if (!Array.isArray(props.resultPollNumbers) || props.resultPollNumbers.length === 0) {
+      throw new Error(`${props.code} is mapped without official result aliases.`)
+    }
+    for (const pollNumber of props.resultPollNumbers) {
+      const resultKey = `${code}:${pollNumber}`
+      if (canadaUsedGeometryResultKeys.has(resultKey)) throw new Error(`${resultKey} is assigned to more than one geometry feature.`)
+      canadaUsedGeometryResultKeys.add(resultKey)
+    }
+    canadaMappedGeometry.push(props)
+    canadaMappedGeometryFeatures += 1
+  }
+}
+if (
+  canadaMappedGeometryFeatures !== canadaManifest.audit.pollingGeometryMappedFeatures
+  || canadaNonReportingGeometryFeatures !== canadaManifest.audit.pollingGeometryNonReportingFeatures
+  || canadaUnmatchedGeometryFeatures !== canadaManifest.audit.pollingGeometryUnmatchedFeatures
+) throw new Error('Canada polling-geometry feature counts do not reconcile to the manifest audit.')
+if (
+  (canadaGeometryStatusCounts.get('resolved-suffix') ?? 0) !== canadaManifest.audit.pollingGeometrySuffixResolvedFeatures
+  || (canadaGeometryStatusCounts.get('resolved-combination') ?? 0) !== canadaManifest.audit.pollingGeometryCombinationResolvedFeatures
+  || (canadaGeometryStatusCounts.get('resolved-source-code') ?? 0) !== canadaManifest.audit.pollingGeometrySourceCodeResolvedFeatures
+) throw new Error('Canada polling-geometry resolution counts do not reconcile to the manifest audit.')
+if (canadaUnmatchedGeometryFeatures !== 0) throw new Error('At least one reportable Canada polling boundary is still unmatched.')
+for (const key of ['electors', 'voters', 'validVotes', 'rejected']) {
+  if (canadaTotals[key] !== canadaManifest.national[key]) throw new Error(`Canada national ${key} does not reconcile.`)
+}
+if (Math.abs(canadaManifest.national.turnout - canadaTotals.voters / canadaTotals.electors * 100) > 1e-9) {
+  throw new Error('Canada national turnout does not include every ballot cast.')
+}
+for (const partyId of canadaPartyIds) {
+  if (
+    canadaTotals.partyVotes[partyId] !== canadaManifest.national.partyVotes[partyId]
+    || canadaTotals.seats[partyId] !== canadaManifest.national.seats[partyId]
+  ) throw new Error(`Canada ${partyId} votes or seats do not reconcile.`)
+}
+if (
+  canadaReplay.schemaVersion !== 'canada-federal-replay/v1'
+  || canadaReplay.ridings.length !== 343
+  || canadaReplay.polls.length !== canadaReplay.events.length
+) throw new Error('Canada replay inventory is invalid.')
+const canadaReplayPartyVotes = new Array(canadaPartyIds.length).fill(0)
+let canadaReplayValid = 0
+let canadaReplayRejected = 0
+let previousCanadaOffset = -1
+const canadaPollIndexes = new Set()
+const canadaReplayPollGroups = new Map()
+for (const event of canadaReplay.events) {
+  if (!Number.isInteger(event[0]) || event[0] < previousCanadaOffset || !canadaReplay.polls[event[1]]) {
+    throw new Error('Canada replay timestamps are unordered or reference an unknown poll.')
+  }
+  canadaPollIndexes.add(event[1])
+  const poll = canadaReplay.polls[event[1]]
+  const groupKey = `${poll[0]}:${poll[1]}`
+  const group = canadaReplayPollGroups.get(groupKey) ?? { batchCount: event[3], batches: new Set() }
+  if (!Number.isInteger(event[2]) || event[2] < 1 || event[2] > event[3] || group.batchCount !== event[3]) {
+    throw new Error(`Canada replay polling station ${groupKey} has invalid batch metadata.`)
+  }
+  group.batches.add(event[2])
+  canadaReplayPollGroups.set(groupKey, group)
+  previousCanadaOffset = event[0]
+}
+if (canadaPollIndexes.size !== canadaReplay.polls.length) throw new Error('Canada replay polls are duplicated or missing.')
+if (canadaReplayPollGroups.size !== canadaReplay.audit.polls) throw new Error('Canada replay polling-station audit does not reconcile.')
+for (const [groupKey, group] of canadaReplayPollGroups) {
+  if (group.batches.size !== group.batchCount) throw new Error(`Canada replay polling station ${groupKey} is missing a partial return.`)
+}
+const canadaOfficialPollTotals = new Map()
+for (const poll of canadaReplay.polls) {
+  canadaReplayValid += poll[4]
+  canadaReplayRejected += poll[5]
+  canadaPartyIds.forEach((_, index) => { canadaReplayPartyVotes[index] += Number(poll[6 + index]) })
+  const ridingCode = canadaReplay.ridings[poll[0]]?.[0]
+  if (!ridingCode) throw new Error(`Canada replay poll references unknown riding index ${poll[0]}.`)
+  const officialKey = `${ridingCode}:${poll[1]}`
+  const official = canadaOfficialPollTotals.get(officialKey) ?? { valid: 0, rejected: 0, parties: new Array(canadaPartyIds.length).fill(0) }
+  official.valid += poll[4]
+  official.rejected += poll[5]
+  canadaPartyIds.forEach((_, index) => { official.parties[index] += Number(poll[6 + index]) })
+  canadaOfficialPollTotals.set(officialKey, official)
+}
+if (canadaReplayValid !== canadaManifest.national.validVotes || canadaReplayRejected !== canadaManifest.national.rejected) {
+  throw new Error('Canada replay turnout does not reconcile to the official endpoint.')
+}
+canadaPartyIds.forEach((partyId, index) => {
+  if (canadaReplayPartyVotes[index] !== canadaManifest.national.partyVotes[partyId]) {
+    throw new Error(`Canada replay ${partyId} vote does not reconcile.`)
+  }
+})
+for (const props of canadaMappedGeometry) {
+  const aggregate = { valid: 0, rejected: 0, parties: new Array(canadaPartyIds.length).fill(0) }
+  for (const pollNumber of props.resultPollNumbers) {
+    const official = canadaOfficialPollTotals.get(`${props.ridingCode}:${pollNumber}`)
+    if (!official) throw new Error(`${props.code} references missing official result ${pollNumber}.`)
+    aggregate.valid += official.valid
+    aggregate.rejected += official.rejected
+    canadaPartyIds.forEach((_, index) => { aggregate.parties[index] += official.parties[index] })
+  }
+  if (aggregate.valid !== props.result.totalVotes || aggregate.rejected !== props.result.rejected) {
+    throw new Error(`${props.code} geometry turnout does not reconcile to its official result buckets.`)
+  }
+  canadaPartyIds.forEach((partyId, index) => {
+    if (aggregate.parties[index] !== props.result.partyVotes[partyId]) {
+      throw new Error(`${props.code} geometry ${partyId} vote does not reconcile.`)
+    }
+  })
+}
+
 process.stdout.write(
-  `Validated ${routeEntrypoints.length} routes, ${publicFiles.length} public files, ${stateCodes.size} state replays, both France replays, and 10 overseas insets.\n`,
+  `Validated ${routeEntrypoints.length} routes, ${publicFiles.length} public files, ${stateCodes.size} state replays, both France replays, 10 overseas insets, and the 343-riding Canada replay.\n`,
 )

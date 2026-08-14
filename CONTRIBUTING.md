@@ -10,7 +10,7 @@ Use the [result correction form](https://github.com/kevyisagenius123/3D/issues/n
 Include:
 
 - election, year, and round;
-- state, county, department, commune, or territory;
+- state, county, department, commune, territory, Canadian riding, or polling division;
 - the value displayed by the Atlas;
 - the expected value;
 - a direct link to an authoritative source;

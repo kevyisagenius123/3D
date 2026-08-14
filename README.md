@@ -4,8 +4,8 @@
 [![Validate public Atlas package](https://github.com/kevyisagenius123/3D/actions/workflows/quality.yml/badge.svg)](https://github.com/kevyisagenius123/3D/actions/workflows/quality.yml)
 [![Version](https://img.shields.io/github/v/tag/kevyisagenius123/3D?label=version)](https://github.com/kevyisagenius123/3D/tags)
 
-An interactive, three-dimensional atlas for exploring presidential elections
-as geography, vote margin, turnout, and time.
+An interactive, three-dimensional atlas for exploring presidential and federal
+elections as geography, vote margin, turnout, seats, and time.
 
 [![The 2020 United States election-night replay showing Wisconsin called for Biden above the national decision desk](docs/images/us-election-night-2020.png)](https://kevyisagenius123.github.io/3D/election-atlas)
 
@@ -18,6 +18,7 @@ decision status, outstanding vote, and the electoral tally as the count moves.*
 | --- | --- |
 | [United States Atlas](https://kevyisagenius123.github.io/3D/election-atlas) | State and county results, swing, and a reconstructed 2020 election-night replay. |
 | [France Atlas](https://kevyisagenius123.github.io/3D/france-atlas) | 2022 results and reconstructed election night by department, territory, and commune. |
+| [Canada Atlas](https://kevyisagenius123.github.io/3D/canada-atlas) | 2025 federal results and reconstructed election night by riding and polling division. |
 
 ### France, territory by territory
 
@@ -29,12 +30,13 @@ decision status, outstanding vote, and the electoral tally as the count moves.*
 
 ## Highlights
 
-- Three-dimensional state, county, department, and commune geography
+- Three-dimensional state, county, department, commune, riding, and polling-division geography
 - Expressive party-margin scales designed for close and landslide results
 - State-to-county drill-down with clean terrain transitions
 - 2016, 2020, and 2024 United States result and swing views
 - A deterministic 2020 election-night reconstruction built from county return packets
 - A 2022 France replay with modeled poll closings, staggered publication waves, and official polling-bureau totals
+- A 2025 Canada replay with staggered time-zone closings, seat standings, and official poll totals
 - Clickable overseas territory insets with commune-level drill-downs
 - Decision-desk context explaining outstanding vote and race-call constraints
 - Responsive controls for desktop, tablet, and mobile displays
@@ -56,10 +58,18 @@ deterministic reconstruction. Poll-closing groups, reporting order, and exact
 timestamps are modeled because a complete archived live return feed is not
 available.
 
+The Canada replay follows the official staggered voting hours across six time
+zones. It preserves all 343 riding endpoints and 74,988 official polling-
+station results while reconstructing 154,969 partial return packets, their
+arrival order, and their timestamps. Early station-level variation settles
+into the exact official endpoints. Seat standings use the riding currently
+leading; 172 seats form a majority.
+
 ## Documentation
 
 - [Data and methodology](docs/DATA_AND_METHODOLOGY.md)
 - [France 2022 replay methodology](docs/FRANCE_2022_METHODOLOGY.md)
+- [Canada 2025 replay methodology](docs/CANADA_2025_METHODOLOGY.md)
 - [Changelog](CHANGELOG.md)
 - [Contributing and result corrections](CONTRIBUTING.md)
 
@@ -77,7 +87,8 @@ published here.
 │   ├── assets/            Minified production bundles
 │   ├── data/              Public election and geometry data
 │   ├── election-atlas/    United States route entry
-│   └── france-atlas/      France route entry
+│   ├── france-atlas/      France route entry
+│   └── canada-atlas/      Canada route entry
 └── README.md
 ```
 

@@ -1,5 +1,5 @@
 name: Result correction
-description: Report a county, commune, territory, state, or national result that appears incorrect.
+description: Report a county, commune, territory, riding, polling division, or national result that appears incorrect.
 title: "[Result correction]: "
 labels:
   - data
@@ -12,6 +12,7 @@ body:
       options:
         - United States Atlas
         - France Atlas
+        - Canada Atlas
     validations:
       required: true
   - type: input
@@ -25,7 +26,7 @@ body:
     id: jurisdiction
     attributes:
       label: Jurisdiction
-      description: Include the state, county, department, commune, territory, and code when known.
+      description: Include the state, county, department, commune, territory, riding, polling division, and code when known.
       placeholder: "Example: Guadeloupe, Les Abymes, 97101"
     validations:
       required: true
